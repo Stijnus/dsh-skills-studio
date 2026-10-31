@@ -71,8 +71,14 @@ DSH_HOME=/tmp/dsh-skills-dev dsh --profile web --port 53999 --no-open
 Or install straight from this repository into an existing profile:
 
 ```bash
+# latest main
 dsh plugin --profile <profile> add github:Stijnus/dsh-skills-manager
+
+# pin a released version (recommended for stable installs) — see the Releases page
+dsh plugin --profile <profile> add github:Stijnus/dsh-skills-manager#v0.1.0
 ```
+
+Releases are tagged `vX.Y.Z` ([Releases](https://github.com/Stijnus/dsh-skills-manager/releases)). To upgrade, install the newer tag the same way; a profile reload applies it (HMR picks it up when enabled).
 
 > **npm name note:** the unscoped `dsh-skills-manager` name on npm belongs to an unrelated third-party plugin. This project is therefore distributed via GitHub/link installs until a uniquely named or scoped npm release exists; do not expect a registry install to fetch this code.
 
