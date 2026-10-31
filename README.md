@@ -1,6 +1,6 @@
 # dsh-skills-manager
 
-[![tests](https://github.com/Stijnus/dsh-skills-manager/actions/workflows/test.yml/badge.svg)](https://github.com/Stijnus/dsh-skills-manager/actions/workflows/test.yml)
+[![tests](https://github.com/Stijnus/dsh-skills-manager/actions/workflows/test.yml/badge.svg)](https://github.com/Stijnus/dsh-skills-manager/actions/workflows/test.yml) [![npm version](https://img.shields.io/npm/v/@stijnus/dsh-skills-manager.svg)](https://www.npmjs.com/package/@stijnus/dsh-skills-manager)
 
 A **Skills** page for DeepSeek Harness Settings: see every installed agent skill, see what
 the registry actually serves to agents, add or edit skills on disk, and block conflicting
@@ -59,6 +59,20 @@ directory; the raw evidence and harnesses are described in
 
 ## Install
 
+### From npm (registry)
+
+```bash
+# latest scoped release
+dsh plugin --profile <profile> add @stijnus/dsh-skills-manager
+
+# pin a version
+dsh plugin --profile <profile> add @stijnus/dsh-skills-manager@0.1.1
+```
+
+The package is published as a scoped npm package from this repository. The unscoped
+`dsh-skills-manager` name belongs to an unrelated third-party plugin, which is why this
+project uses the `@stijnus` scope. GitHub and local-link installs remain available below.
+
 ### Local development (web profile, isolated)
 
 ```bash
@@ -75,12 +89,12 @@ Or install straight from this repository into an existing profile:
 dsh plugin --profile <profile> add github:Stijnus/dsh-skills-manager
 
 # pin a released version (recommended for stable installs) — see the Releases page
-dsh plugin --profile <profile> add github:Stijnus/dsh-skills-manager#v0.1.0
+dsh plugin --profile <profile> add github:Stijnus/dsh-skills-manager#v0.1.1
 ```
 
 Releases are tagged `vX.Y.Z` ([Releases](https://github.com/Stijnus/dsh-skills-manager/releases)). To upgrade, install the newer tag the same way; a profile reload applies it (HMR picks it up when enabled).
 
-> **npm name note:** the unscoped `dsh-skills-manager` name on npm belongs to an unrelated third-party plugin. This project is therefore distributed via GitHub/link installs until a uniquely named or scoped npm release exists; do not expect a registry install to fetch this code.
+> **npm name note:** the unscoped `dsh-skills-manager` name on npm belongs to an unrelated third-party plugin, so the published package is the scoped `@stijnus/dsh-skills-manager`; the GitHub/link forms above are fallbacks for development checkouts.
 
 Overlay config for an isolated run (agents home, writable root and libraries):
 

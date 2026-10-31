@@ -24,7 +24,7 @@
 //     response.ok so validation errors/conflicts reach the form.
 //   - All visible copy (including aria labels) comes from the en/zh dictionaries.
 window.__ModuleLoader__.load({
-  id: 'dsh-skills-manager',
+  id: '@stijnus/dsh-skills-manager',
   factory: function (require) {
     var module = { exports: {} }
     var exports = module.exports

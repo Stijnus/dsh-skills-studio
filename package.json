@@ -1,7 +1,6 @@
 {
-  "name": "dsh-skills-manager",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@stijnus/dsh-skills-manager",
+  "version": "0.1.1",
   "type": "module",
   "description": "Skills settings for DeepSeek Harness: install, add, edit, and validate agent skills on disk, see what the registry actually serves to agents, and block conflicting saves.",
   "main": "index.js",
@@ -47,6 +46,7 @@
     "skill-manager"
   ],
   "engines": {
+    "node": ">=22",
     "dsh": "^0.2.1-rc.5"
   },
   "license": "MIT",
@@ -61,6 +61,10 @@
   },
   "scripts": {
     "test": "node --test",
-    "check": "node --check index.js && node --check client.js && for f in src/*.js; do node --check \"$f\"; done"
+    "check": "node --check index.js && node --check client.js && for f in src/*.js; do node --check \"$f\"; done",
+    "prepublishOnly": "node --check index.js && node --check client.js && node --test"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
