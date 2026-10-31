@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Independent UI end-to-end verification for dsh-skills-manager (playwright-core).
+ * Independent UI end-to-end verification for dsh-skills-studio (playwright-core).
  *
  * Drives the real Settings > Skills section of a scratch DSH web instance:
  * Installed/Available tabs, Add/Edit/Delete through the form, duplicate-name
@@ -125,7 +125,7 @@ let sawEditorAlertRole = false;
   page.on('pageerror', (error) => pageErrors.push(String(error).slice(0, 500)))
   page.on('response', (response) => {
     const url = response.url()
-    if (url.includes('/skills-manager/api/')) {
+    if (url.includes('/skills-studio/api/')) {
       apiLog.push({ method: response.request().method(), url: url.replace(/^https?:\/\/[^/]+/, ''), status: response.status() })
     }
   })
@@ -220,7 +220,7 @@ let sawEditorAlertRole = false;
     const installButton = root.locator(`button[aria-label="Install ${REMOVE_BEFORE}"]`)
     await installButton.waitFor({ state: 'visible', timeout: 10000 })
     const [response] = await Promise.all([
-      page.waitForResponse((res) => res.url().includes('/skills-manager/api/install'), { timeout: 20000 }),
+      page.waitForResponse((res) => res.url().includes('/skills-studio/api/install'), { timeout: 20000 }),
       installButton.click(),
     ])
     await page.waitForTimeout(1500)
@@ -251,7 +251,7 @@ let sawEditorAlertRole = false;
     record('add-editor-focus', { focusedField: 'dsm-f-name', valid: true, screenshot: addFormShot },
       { focused, looksGood: editorText.includes('Looks good.') }, focused === 'dsm-f-name' && editorText.includes('Looks good.'), { path: addFormShot })
     const [response] = await Promise.all([
-      page.waitForResponse((res) => res.url().includes('/skills-manager/api/save'), { timeout: 20000 }),
+      page.waitForResponse((res) => res.url().includes('/skills-studio/api/save'), { timeout: 20000 }),
       root.getByRole('button', { name: /^Save/ }).click(),
     ])
     await page.waitForTimeout(1500)
@@ -277,7 +277,7 @@ let sawEditorAlertRole = false;
     await page.locator('#dsm-f-description').fill('Skill edited by the independent UI E2E harness.')
     await page.waitForTimeout(800)
     const [response] = await Promise.all([
-      page.waitForResponse((res) => res.url().includes('/skills-manager/api/save'), { timeout: 20000 }),
+      page.waitForResponse((res) => res.url().includes('/skills-studio/api/save'), { timeout: 20000 }),
       root.getByRole('button', { name: /^Save/ }).click(),
     ])
     await page.waitForTimeout(1500)
@@ -329,7 +329,7 @@ let sawEditorAlertRole = false;
     const confirmText = await root.locator('.dsm-confirm-text').first().innerText().catch(() => '')
     const deleteConfirmShot = await shot(page, 'ui-delete-confirm-light')
     const [response] = await Promise.all([
-      page.waitForResponse((res) => res.url().includes('/skills-manager/api/delete'), { timeout: 20000 }),
+      page.waitForResponse((res) => res.url().includes('/skills-studio/api/delete'), { timeout: 20000 }),
       root.locator(`button[aria-label="Confirm deleting ${UNIQUE}"]`).click(),
     ])
     await page.waitForTimeout(1500)

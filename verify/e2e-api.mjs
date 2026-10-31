@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Independent API end-to-end verification for dsh-skills-manager.
+ * Independent API end-to-end verification for dsh-skills-studio.
  *
  * Drives the real HTTP API of a scratch DSH web instance against a scratch
  * agents home (never the user's ~/.agents). Every assertion records the
@@ -87,8 +87,8 @@ async function req(method, path, body, rawBody) {
   return { status: response.status, headers: Object.fromEntries(response.headers.entries()), text, json }
 }
 
-async function api(path) { return req('GET', `/skills-manager/api${path}`) }
-async function post(path, body) { return req('POST', `/skills-manager/api${path}`, body) }
+async function api(path) { return req('GET', `/skills-studio/api${path}`) }
+async function post(path, body) { return req('POST', `/skills-studio/api${path}`, body) }
 
 async function state() {
   const response = await api('/state')
@@ -131,9 +131,9 @@ async function main() {
   // ---------------------------------------------------------------- health
   {
     const response = await api('/health')
-    record('health', 'ok', { status: 200, name: 'dsh-skills-manager' },
+    record('health', 'ok', { status: 200, name: 'dsh-skills-studio' },
       { status: response.status, name: response.json?.name, writableRoot: response.json?.writableRoot },
-      response.status === 200 && response.json?.ok === true && response.json?.name === 'dsh-skills-manager')
+      response.status === 200 && response.json?.ok === true && response.json?.name === 'dsh-skills-studio')
   }
 
   // ----------------------------------------------------------------- state
@@ -405,15 +405,15 @@ async function main() {
     record('safety', 'nul-rejected', { status: 200, ok: false }, { status: nul.status, ok: nul.json?.ok, errors: nul.json?.errors },
       nul.status === 200 && nul.json?.ok === false)
 
-    const badJson = await req('POST', '/skills-manager/api/save', undefined, '{not json')
+    const badJson = await req('POST', '/skills-studio/api/save', undefined, '{not json')
     record('safety', 'bad-json', [400, 422], { status: badJson.status, error: badJson.json?.error }, [400, 422].includes(badJson.status))
 
-    const method = await req('POST', '/skills-manager/api/state', {})
+    const method = await req('POST', '/skills-studio/api/state', {})
     record('safety', 'method-not-allowed', 405, { status: method.status, error: method.json?.error }, method.status === 405)
     const unknownEndpoint = await api('/unknown')
     record('safety', 'unknown-endpoint', 404, { status: unknownEndpoint.status }, unknownEndpoint.status === 404)
 
-    const huge = await req('POST', '/skills-manager/api/save', undefined, JSON.stringify({ ...draft, body: 'x'.repeat(1024 * 1024 + 1024) }))
+    const huge = await req('POST', '/skills-studio/api/save', undefined, JSON.stringify({ ...draft, body: 'x'.repeat(1024 * 1024 + 1024) }))
     record('safety', 'oversized-body', 413, { status: huge.status, error: huge.json?.error?.code }, huge.status === 413)
   }
 

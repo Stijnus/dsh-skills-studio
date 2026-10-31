@@ -970,7 +970,7 @@ test('GET /health reports resolved roots and configured libraries', async (t) =>
   const response = await api.handle({ method: 'GET', url: `${API_PREFIX}/api/health` })
   assert.equal(response.status, 200)
   assert.equal(response.payload.ok, true)
-  assert.equal(response.payload.name, 'dsh-skills-manager')
+  assert.equal(response.payload.name, 'dsh-skills-studio')
   assert.equal(response.payload.writableRoot, join(base, 'agents', 'skills'))
   assert.ok(response.payload.roots.some(root => root.id === 'user-agents'))
   assert.deepEqual(response.payload.libraries, [{ id: 'pack', label: 'Pack', path: libraryPath }])

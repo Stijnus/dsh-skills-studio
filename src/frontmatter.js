@@ -12,7 +12,7 @@
  * strings for text fields, invocation booleans only when disabled, and no
  * empty `whenToUse` key.
  *
- * @module dsh-skills-manager/frontmatter
+ * @module dsh-skills-studio/frontmatter
  */
 
 /** Raised for malformed or unsupported frontmatter. Message names the line. */

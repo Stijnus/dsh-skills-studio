@@ -1,5 +1,5 @@
 # dsh bundle patch: inserts this plugin's row into a profile's layer stack.
 # `id` is the composition row; `name` is the package specifier.
 - insert:
-    - id: skills-manager
+    - id: skills-studio
       name: 'dsh-skills-studio'

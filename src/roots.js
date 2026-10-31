@@ -7,7 +7,7 @@
  * user `.agents` (500, or the managed root when the writable path is the
  * default).
  *
- * @module dsh-skills-manager/roots
+ * @module dsh-skills-studio/roots
  */
 
 import { stat } from 'node:fs/promises'

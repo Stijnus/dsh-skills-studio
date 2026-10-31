@@ -1,4 +1,4 @@
-# dsh-skills-manager — build contract (v1)
+# dsh-skills-studio — build contract (v1)
 
 A DSH bundle that adds a **Skills** page to Settings: install/edit skills on disk, see
 what agents can actually load, and block conflicting saves before they happen.
@@ -28,7 +28,7 @@ No server-side model calls, no shell execution, no network.
 ## Package layout and ownership
 
 ```
-dsh-skills-manager/
+dsh-skills-studio/
   package.json          Lead
   cordis.patch.yml      Lead
   icon.svg              Lead
@@ -58,7 +58,7 @@ api-dev's. The Lead owns the manifest files and integration.
 - Client services: `ctx.get('slots')` (required-ish), `ctx.get('locale')` (optional),
   `ctx.get('sessions')` (optional). Reading a service not listed in `inject` throws, so use
   `ctx.get()` for everything optional and never `ctx.locale` directly.
-- Host web routes: `ctx.webServer.register({ kind: 'prefix', path: '/skills-manager', handler(req, res) })`
+- Host web routes: `ctx.webServer.register({ kind: 'prefix', path: '/skills-studio', handler(req, res) })`
   inside `ctx.effect(() => …)`.
 - Host plugin entry: named `export const name`, `export const inject = ['webServer']`,
   `export function apply(ctx, config = {})`. Read optional services with `ctx.get('skills')`.
@@ -115,12 +115,12 @@ when missing). Project roots need a `cwd`; without one, skip them.
 
 ## HTTP API
 
-Prefix `/skills-manager`, JSON only, `cache-control: no-store`, body cap 1 MiB.
+Prefix `/skills-studio`, JSON only, `cache-control: no-store`, body cap 1 MiB.
 Success envelope `{ ok: true, ... }`. Failure:
 `{ ok: false, error: { code, message, details? } }` with status 400/404/405/413/422/409/500.
 Validation responses additionally carry `{ errors, conflicts, warnings }` (see below).
 
-### GET `/skills-manager/api/state?cwd=<abs path>`
+### GET `/skills-studio/api/state?cwd=<abs path>`
 
 ```json
 {
@@ -201,12 +201,12 @@ Rules:
   alphanumeric words length > 2 minus stop words. Jaccard ≥ 0.5 against another skill →
   warning carrying `sharedWords`. Deduplicate per pair; cap at 5 warnings.
 
-### GET `/skills-manager/api/skill?rootId=<id>&relPath=<path>`
+### GET `/skills-studio/api/skill?rootId=<id>&relPath=<path>`
 
 → `{ ok: true, root: Root, skill: { …entry, content: "full file text" } }`.
 404 `not-found` when `rootId`/`relPath` does not name a scanned entry.
 
-### POST `/skills-manager/api/validate` and `POST /skills-manager/api/save`
+### POST `/skills-studio/api/validate` and `POST /skills-studio/api/save`
 
 Body (action `create`):
 
@@ -269,7 +269,7 @@ user-invocable: false          # only when userInvocable === false
 <body trimmed of trailing whitespace>
 ```
 
-### POST `/skills-manager/api/delete`
+### POST `/skills-studio/api/delete`
 
 `{ "rootId": "user-agents", "relPath": "my-skill/SKILL.md", "expectedSha256": "…" }`
 → `{ ok:true, removed: { rootId, relPath, name }, registry: { checked, visible:false, catalogCount, waitedMs } }`.
@@ -279,7 +279,7 @@ is a symlink, or when the bundle directory contains something other than `SKILL.
 regular resource files under the bundle (still allowed: `references/`, `scripts/`, `assets/`,
 any regular files/dirs inside that bundle — just never outside it).
 
-### POST `/skills-manager/api/install`
+### POST `/skills-studio/api/install`
 
 `{ "libraryId": "deepseek-stack", "relPath": "ds-plan-loop/SKILL.md", "overwrite": false,
    "expectedSha256": "…", "force": false }`
@@ -312,7 +312,7 @@ any regular files/dirs inside that bundle — just never outside it).
   ("Skills"), locale namespace `settings.skills` when `ctx.get('locale')` exists.
 - `inject = ['slots']`; everything else via `ctx.get()`. Never throw from `apply` or from a
   render when an optional service is missing.
-- Fetch `GET /skills-manager/api/state` on mount, after every mutation, and on manual
+- Fetch `GET /skills-studio/api/state` on mount, after every mutation, and on manual
   refresh. Same-origin `fetch(url, { credentials: 'same-origin' })`.
 - Layout (translated from the active moodboard language into the DSH settings shell):
   a compact hero row (title from the shell already; use a one-line subtitle), a stat strip

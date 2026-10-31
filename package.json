@@ -1,6 +1,6 @@
 {
   "name": "dsh-skills-studio",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "description": "Skills settings for DeepSeek Harness: install, add, edit, and validate agent skills on disk, see what the registry actually serves to agents, and block conflicting saves.",
   "main": "index.js",
@@ -53,11 +53,11 @@
   "author": "Stijnus",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Stijnus/dsh-skills-manager.git"
+    "url": "git+https://github.com/Stijnus/dsh-skills-studio.git"
   },
-  "homepage": "https://github.com/Stijnus/dsh-skills-manager#readme",
+  "homepage": "https://github.com/Stijnus/dsh-skills-studio#readme",
   "bugs": {
-    "url": "https://github.com/Stijnus/dsh-skills-manager/issues"
+    "url": "https://github.com/Stijnus/dsh-skills-studio/issues"
   },
   "scripts": {
     "test": "node --test",

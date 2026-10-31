@@ -8,7 +8,7 @@
  * crash leaves either the old or the new file. All functions throw a
  * `MutationError` with a stable `code` that the HTTP layer maps to a status.
  *
- * @module dsh-skills-manager/mutate
+ * @module dsh-skills-studio/mutate
  */
 
 import { randomBytes } from 'node:crypto'

@@ -1,7 +1,7 @@
 /**
- * dsh-skills-manager — host plugin entry.
+ * dsh-skills-studio — host plugin entry.
  *
- * Registers one `webServer` prefix route (`/skills-manager`) that backs the
+ * Registers one `webServer` prefix route (`/skills-studio`) that backs the
  * Skills settings page: scan the local skill roots, validate drafts, write
  * `SKILL.md` files atomically under the configured writable root, and report
  * whether the live registry now serves the skill.
@@ -10,20 +10,20 @@
  * request time, so the plugin also works in profiles without a skill registry
  * (the page then shows the catalog as unavailable instead of failing).
  *
- * @module dsh-skills-manager
+ * @module dsh-skills-studio
  */
 
 import { createApi, API_PREFIX } from './src/api.js'
 import { normalizeConfig } from './src/config.js'
 
 /** Cordis plugin name. */
-export const name = 'skills-manager'
+export const name = 'skills-studio'
 
 /** The web server is the one required service; anything else is read optionally. */
 export const inject = ['webServer']
 
 /**
- * Register the `/skills-manager` route. Config is validated here, at load time,
+ * Register the `/skills-studio` route. Config is validated here, at load time,
  * so a malformed plugin row fails loudly instead of at the first request.
  *
  * @param {object} ctx host context exposing `webServer` (required) plus
@@ -37,7 +37,7 @@ export function apply(ctx, config = {}) {
 
   if (ctx === undefined || ctx === null || ctx.webServer === undefined || typeof ctx.webServer.register !== 'function') {
     throw new TypeError(
-      'skills-manager: ctx.webServer is unavailable; mount @deepseek-ai/dsh-host-webserver in this profile.',
+      'skills-studio: ctx.webServer is unavailable; mount @deepseek-ai/dsh-host-webserver in this profile.',
     )
   }
 
@@ -49,14 +49,14 @@ export function apply(ctx, config = {}) {
   if (typeof ctx.effect === 'function') {
     // Route ownership lives with this plugin's fiber: disposing the plugin
     // removes the route through the returned disposer.
-    ctx.effect(register, 'skills-manager: /skills-manager routes')
+    ctx.effect(register, 'skills-studio: /skills-studio routes')
   } else {
     register()
   }
 
   try {
     ctx.logger?.info?.(
-      `skills-manager: /skills-manager routes registered; writable root ${normalized.writableRoot}`,
+      `skills-studio: /skills-studio routes registered; writable root ${normalized.writableRoot}`,
     )
   } catch {
     // A throwing logger must not take the plugin down.

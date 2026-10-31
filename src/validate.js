@@ -7,7 +7,7 @@
  * the conflicts a save would create. `detectConflicts` is the same name/alias/
  * overlap analysis applied to the already-scanned installed set.
  *
- * @module dsh-skills-manager/validate
+ * @module dsh-skills-studio/validate
  */
 
 import { lstat } from 'node:fs/promises'

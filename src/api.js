@@ -2,12 +2,12 @@
  * HTTP API for the Skills manager: JSON envelope, route dispatch, body cap,
  * optimistic-sha mutations, and the post-write registry visibility probe.
  *
- * Routes are mounted under the `/skills-manager` prefix registered by
+ * Routes are mounted under the `/skills-studio` prefix registered by
  * `index.js`; the paths below are absolute so the handler can also be driven
  * directly in tests. The handler never throws: every failure becomes an
  * `{ ok:false, error:{ code, message } }` envelope.
  *
- * @module dsh-skills-manager/api
+ * @module dsh-skills-studio/api
  */
 
 import { readFile } from 'node:fs/promises'
@@ -39,7 +39,7 @@ import {
 } from './validate.js'
 
 /** URL prefix owned by this plugin (registered through `ctx.webServer`). */
-export const API_PREFIX = '/skills-manager'
+export const API_PREFIX = '/skills-studio'
 
 /** Request body cap; also the largest JSON body the handler will buffer. */
 export const BODY_LIMIT_BYTES = 1024 * 1024
@@ -717,7 +717,7 @@ export function createApi(options) {
       status: 200,
       payload: {
         ok: true,
-        name: 'dsh-skills-manager',
+        name: 'dsh-skills-studio',
         version: STATE_VERSION,
         generatedAt: new Date().toISOString(),
         writableRoot: config.writableRoot,

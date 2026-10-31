@@ -58,7 +58,7 @@ let browser = null
   await root.waitFor({ state: 'visible', timeout: 15000 })
   await page.waitForTimeout(800)
 
-  const state = await page.evaluate(async () => (await fetch('/skills-manager/api/state', { credentials: 'same-origin' })).json())
+  const state = await page.evaluate(async () => (await fetch('/skills-studio/api/state', { credentials: 'same-origin' })).json())
   record('api-state-hostscope', { coversLocalRoots: false, catalogEntries: 1 },
     { coversLocalRoots: state.catalog.coversLocalRoots, catalogEntries: state.catalog.entries.length, entryPaths: state.catalog.entries.map((entry) => entry.path) },
     state.catalog.coversLocalRoots === false && state.catalog.entries.length === 1)

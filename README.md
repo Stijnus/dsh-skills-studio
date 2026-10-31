@@ -1,8 +1,8 @@
-# dsh-skills-manager
+# dsh-skills-studio
 
-[![tests](https://github.com/Stijnus/dsh-skills-manager/actions/workflows/test.yml/badge.svg)](https://github.com/Stijnus/dsh-skills-manager/actions/workflows/test.yml) [![npm version](https://img.shields.io/npm/v/dsh-skills-studio.svg)](https://www.npmjs.com/package/dsh-skills-studio)
+[![tests](https://github.com/Stijnus/dsh-skills-studio/actions/workflows/test.yml/badge.svg)](https://github.com/Stijnus/dsh-skills-studio/actions/workflows/test.yml) [![npm version](https://img.shields.io/npm/v/dsh-skills-studio.svg)](https://www.npmjs.com/package/dsh-skills-studio)
 
-A **Skills** page for DeepSeek Harness Settings: see every installed agent skill, see what
+A **Skills** page for DeepSeek Harness Settings (formerly known as `dsh-skills-manager`; GitHub redirects): see every installed agent skill, see what
 the registry actually serves to agents, add or edit skills on disk, and block conflicting
 saves before they happen.
 
@@ -66,19 +66,19 @@ directory; the raw evidence and harnesses are described in
 dsh plugin --profile <profile> add dsh-skills-studio
 
 # pin a version
-dsh plugin --profile <profile> add dsh-skills-studio@0.1.2
+dsh plugin --profile <profile> add dsh-skills-studio@0.1.3
 ```
 
-The project is called **dsh-skills-manager**, but its npm package is **`dsh-skills-studio`**:
-the unscoped `dsh-skills-manager` name belongs to an unrelated third-party plugin, and the
+The project is called **dsh-skills-studio**, but its npm package is **`dsh-skills-studio`**:
+the unscoped `dsh-skills-studio` name belongs to an unrelated third-party plugin, and the
 previous `@stijnus/...` scope has been retired. GitHub and local-link installs remain
 available below.
 
 ### Local development (web profile, isolated)
 
 ```bash
-git clone https://github.com/Stijnus/dsh-skills-manager.git
-cd dsh-skills-manager
+git clone https://github.com/Stijnus/dsh-skills-studio.git
+cd dsh-skills-studio
 DSH_HOME=/tmp/dsh-skills-dev dsh plugin --profile web add link:$PWD
 DSH_HOME=/tmp/dsh-skills-dev dsh --profile web --port 53999 --no-open
 ```
@@ -87,23 +87,23 @@ Or install straight from this repository into an existing profile:
 
 ```bash
 # latest main
-dsh plugin --profile <profile> add github:Stijnus/dsh-skills-manager
+dsh plugin --profile <profile> add github:Stijnus/dsh-skills-studio
 
 # pin a released version (recommended for stable installs) — see the Releases page
-dsh plugin --profile <profile> add github:Stijnus/dsh-skills-manager#v0.1.2
+dsh plugin --profile <profile> add github:Stijnus/dsh-skills-studio#v0.1.3
 ```
 
-Releases are tagged `vX.Y.Z` ([Releases](https://github.com/Stijnus/dsh-skills-manager/releases)). To upgrade, install the newer tag the same way; a profile reload applies it (HMR picks it up when enabled).
+Releases are tagged `vX.Y.Z` ([Releases](https://github.com/Stijnus/dsh-skills-studio/releases)). To upgrade, install the newer tag the same way; a profile reload applies it (HMR picks it up when enabled).
 
 > **npm name note:** the package is published as `dsh-skills-studio` because the plain
-> `dsh-skills-manager` name on npm belongs to an unrelated third-party plugin. The GitHub/link
+> `dsh-skills-studio` name on npm belongs to an unrelated third-party plugin. The GitHub/link
 > forms above are fallbacks for development checkouts.
 
 Overlay config for an isolated run (agents home, writable root and libraries):
 
 ```yaml
-# skills-manager.overlay.yml — pass with --patch
-- id: skills-manager
+# skills-studio.overlay.yml — pass with --patch
+- id: skills-studio
   config:
     agentsHome: /tmp/dsh-skills-dev/agents
     writableRoot: /tmp/dsh-skills-dev/managed-skills
@@ -124,7 +124,7 @@ shell performs the package operation and recomposes the app). After installation
 reports `restart-required`.
 
 The current live install on this machine uses the hand-managed profile path instead: a
-`node_modules/dsh-skills-manager` symlink plus a profile-patch row (see
+`node_modules/dsh-skills-studio` symlink plus a profile-patch row (see
 [SKILLS-VERIFICATION.md](SKILLS-VERIFICATION.md) §4). DSH's profile HMR loads both halves
 into the running app without a restart. Durability caveat: because the profile
 `package.json` does not declare the package, a later plugin-manager / pnpm operation can
@@ -155,7 +155,7 @@ separate library entry.
 
 ## HTTP API (host half, same origin)
 
-Prefix `/skills-manager/api`, JSON, `cache-control: no-store`.
+Prefix `/skills-studio/api`, JSON, `cache-control: no-store`.
 
 | Method + path | Purpose |
 |---|---|

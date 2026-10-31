@@ -63,7 +63,7 @@ async function req(method, path, body) {
     init.headers['content-type'] = 'application/json'
     init.body = JSON.stringify(body)
   }
-  const response = await fetch(`${BASE}/skills-manager/api${path}`, init)
+  const response = await fetch(`${BASE}/skills-studio/api${path}`, init)
   const text = await response.text()
   let json = null
   try { json = text ? JSON.parse(text) : null } catch { /* ignore */ }

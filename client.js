@@ -1,4 +1,4 @@
-// dsh-skills-manager browser client half — hand-written in the DeepSeek Harness
+// dsh-skills-studio browser client half — hand-written in the DeepSeek Harness
 // ModuleLoader format (no bundler needed). Declared via package.json `dsh.client`
 // and exported as `./client`; the harness serves this file and registers it.
 //
@@ -19,7 +19,7 @@
 //   - One <style> element injected via ctx.effect (classes prefixed dsm-, all
 //     selectors scoped under .dsm-root). Host theme tokens only; light and dark
 //     are both served by the tokens.
-//   - The API is same-origin fetch against `/skills-manager` with
+//   - The API is same-origin fetch against `/skills-studio` with
 //     credentials: 'same-origin'. Non-2xx JSON envelopes are parsed regardless of
 //     response.ok so validation errors/conflicts reach the form.
 //   - All visible copy (including aria labels) comes from the en/zh dictionaries.
@@ -32,12 +32,12 @@ window.__ModuleLoader__.load({
     var React = require('react')
     var h = React.createElement
 
-    var name = 'skills-manager-client'
+    var name = 'skills-studio-client'
     var inject = ['slots']
     // The settings locale namespace. Declared on the slot registration only when
     // the host installed a locale face; the dictionaries are registered there too.
     var NS = 'settings.skills'
-    var API_BASE = '/skills-manager'
+    var API_BASE = '/skills-studio'
     var STYLE_ID = 'dsm-styles'
     var VALIDATE_DEBOUNCE_MS = 350
     var NAME_MAX = 64

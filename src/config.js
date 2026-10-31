@@ -6,7 +6,7 @@
  * `ConfigError` naming the field; `apply()` surfaces that at load time, which
  * is the only place a bad config should ever fail.
  *
- * @module dsh-skills-manager/config
+ * @module dsh-skills-studio/config
  */
 
 import { homedir } from 'node:os'

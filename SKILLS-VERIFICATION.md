@@ -1,4 +1,4 @@
-# Skills verification — dsh-skills-manager end-to-end (independent)
+# Skills verification — dsh-skills-studio end-to-end (independent)
 
 Verified 2026-10-31 on **DSH 0.2.1-rc.5** by the independent verifier. Final verified plugin hashes
 (`index.js`, `src/*`, `client.js`, tests) are in
@@ -91,11 +91,11 @@ and the Available stat includes the plugin entry (35 library + 1 catalog-only = 
 
 ## 4. Desktop delivery (PASS; app never restarted or modified)
 
-Read-only evidence from the **live user app** (`GET http://127.0.0.1:50910/skills-manager/api/…`):
+Read-only evidence from the **live user app** (`GET http://127.0.0.1:50910/skills-studio/api/…`):
 49 skills (35 ds entries, all valid), libraries 29+6 installed, 0 conflicts, catalog available with
 **30 entries** from providers `rev-eng-skills` + `dsh-office`, and **`catalog.coversLocalRoots:false`**
 after the Lead HMR-reloaded the late fix (`raw/desktop-live-state.json`, `raw/desktop-live-summary.json`).
-Profile state: symlink `node_modules/dsh-skills-manager → <plugin dir>` + `- insert: id: skills-manager`
+Profile state: symlink `node_modules/dsh-skills-studio → <plugin dir>` + `- insert: id: skills-studio`
 row with the two libraries in `~/.dsh/profiles/desktop/cordis.patch.yml`
 (`raw/desktop-profile-install.txt`).
 **HMR/no restart, independently proven**: `libproc proc_pidinfo` gives app start `2026-10-30T16:13:54`;
@@ -104,9 +104,9 @@ afterwards → loaded into a ~21 h-old process without a restart (`raw/desktop-a
 
 Install steps the Lead ran (verifier did not re-run them): (1) link the package into the desktop profile
 (`dsh plugin --profile desktop add link:<plugin dir>` equivalent — currently only the symlink exists),
-(2) add the top-level `- insert:` row `id: skills-manager, name: 'dsh-skills-manager'` + `config.libraries`
+(2) add the top-level `- insert:` row `id: skills-studio, name: 'dsh-skills-studio'` + `config.libraries`
 to `~/.dsh/profiles/desktop/cordis.patch.yml`, (3) no restart needed — DSH profile HMR reloads the
-composition and serves the client bundle; live check is a read-only `GET /skills-manager/api/health`.
+composition and serves the client bundle; live check is a read-only `GET /skills-studio/api/health`.
 
 **The earlier probe caveat is fixed and verified**, not just patched:
 - `listingCoversLocalRoots` is now path-based (`src/api.js:165-184`): an entry covers the roots only when
@@ -119,7 +119,7 @@ composition and serves the client bundle; live check is a read-only `GET /skills
   after 2001 ms — `raw/e2e-desktop-probe-shape.json`). The UI now shows the neutral "Saved · the host
   cannot observe the session catalog from here…" message instead of "Saved, but agents cannot see it yet."
 - Synthetic global provider that *does* serve the same root still returns `checked:true, visible:true` (§2).
-- Remaining caveat (**LOW**): the live profile's `package.json` does not declare `dsh-skills-manager` as a
+- Remaining caveat (**LOW**): the live profile's `package.json` does not declare `dsh-skills-studio` as a
   dependency/bundle; the working install is the `node_modules` symlink + patch row. A later
   `dsh plugin --profile desktop …` / pnpm install could prune the symlink — declare the link dependency
   when convenient.
@@ -181,7 +181,7 @@ node verify/audit-roots.mjs --agents-home "$HOME/.agents" --dsh-home "$HOME/.dsh
   --deepseek-stack "$PWD/ds-stack" --pretty > verify/raw/audit-roots-final.json
 python3 verify/extract-catalog.py "$HOME/.dsh/sessions/.../session.v4.jsonl.zstd" verify/raw/catalog-desktop-session.txt
 # read-only desktop live check
-curl -s "http://127.0.0.1:50910/skills-manager/api/state" > verify/raw/desktop-live-state.json
+curl -s "http://127.0.0.1:50910/skills-studio/api/state" > verify/raw/desktop-live-state.json
 ```
 
 Evidence map: `verify/raw/` (all JSON/text above) · `verify/screenshots/` (9 PNGs: light, dark, add form,

@@ -9,7 +9,7 @@
  * `valid:false` and an `errors` list — so the page can explain why an entry
  * exists on disk but does not reach agents.
  *
- * @module dsh-skills-manager/scan
+ * @module dsh-skills-studio/scan
  */
 
 import { createHash } from 'node:crypto'

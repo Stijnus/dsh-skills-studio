@@ -42,7 +42,7 @@ function fakeHost() {
 }
 
 test('the plugin exports the Cordis name, inject list, and apply function', () => {
-  assert.equal(name, 'skills-manager')
+  assert.equal(name, 'skills-studio')
   assert.deepEqual(inject, ['webServer'])
   assert.equal(typeof apply, 'function')
   assert.equal(plugin.name, name)
@@ -59,7 +59,7 @@ test('apply registers one prefix route inside ctx.effect and returns its dispose
   assert.equal(routes[0].path, API_PREFIX)
   assert.equal(typeof routes[0].handler, 'function')
   assert.equal(effects.length, 1)
-  assert.match(effects[0].label, /skills-manager/)
+  assert.match(effects[0].label, /skills-studio/)
   assert.equal(disposers.length, 1)
   assert.equal(typeof disposers[0], 'function')
   disposers[0]()
