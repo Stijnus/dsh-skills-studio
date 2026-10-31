@@ -20,6 +20,9 @@ jobs:
       - name: Tests
         run: node --test
       - name: Publish
+        # Runs only once the repository has an npm auth token secret; until then a
+        # tag push still runs the tests and leaves publishing to a manual step.
+        if: ${{ env.NODE_AUTH_TOKEN != '' }}
         run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
