@@ -1,0 +1,3 @@
+proc_pidinfo bytes: 136
+pid: 6371 name: DeepSeek Harness
+started: 2026-10-30T16:13:54

@@ -1,0 +1,37 @@
+OK   ds-adopt         150  
+OK   ds-audit         111  
+OK   ds-best           85  
+OK   ds-best-of-n     193  
+OK   ds-blast-radius  173  
+OK   ds-blueprint     192  
+OK   ds-catchup       166  
+OK   ds-context        85  
+OK   ds-context-reset 188  
+OK   ds-design        192  
+OK   ds-design-audit  195  
+OK   ds-explain       166  
+OK   ds-help          173  
+OK   ds-jury          183  
+OK   ds-ledger        183  
+OK   ds-lessons       176  
+OK   ds-mode          162  
+OK   ds-plan           96  
+OK   ds-plan-loop     182  
+OK   ds-pr            153  
+OK   ds-pr-comments   168  
+OK   ds-principles    184  
+OK   ds-ready         146  
+OK   ds-review        114  
+OK   ds-review-loop   187  
+OK   ds-revive        156  
+OK   ds-sharpen       192  
+OK   ds-ship          156  
+OK   ds-swarm         183  
+OK   ds-tdd           174  
+OK   ds-unslop        167  
+OK   ds-unstick       187  
+OK   ds-verify         94  
+OK   ds-verify-loop   196  
+OK   ds-watch-pr      165  
+
+35 skills | 0 FAIL | 0 WARN | catalog 5559 chars (~1544 tokens per session) | 6 gesture-only (0 catalog cost)

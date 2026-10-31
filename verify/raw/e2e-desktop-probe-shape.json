@@ -1,0 +1,20 @@
+{
+  "scenario": "host-scope catalog overlaps scanned roots through one duplicate name (reverse-engineer-anything); provider serving the writable root is scoped elsewhere",
+  "scannedSkills": 49,
+  "catalogEntries": 1,
+  "catalogCoversLocalRoots": true,
+  "catalogOverlapNames": [
+    "reverse-engineer-anything"
+  ],
+  "saveStatus": 200,
+  "registry": {
+    "checked": true,
+    "visible": false,
+    "provider": null,
+    "path": null,
+    "catalogCount": 1,
+    "waitedMs": 2001
+  },
+  "registryMessageExpectation": "Saved, but agents cannot see it yet.",
+  "cleanupDeleteStatus": 200
+}

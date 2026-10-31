@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Skills manager">
+  <defs>
+    <linearGradient id="dsm-bg" x1="8" y1="6" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4c6ef5"/>
+      <stop offset="1" stop-color="#2b3a8f"/>
+    </linearGradient>
+    <linearGradient id="dsm-spark" x1="24" y1="18" x2="42" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dbe4ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#dsm-bg)"/>
+  <path d="M32 14.5c1.1 0 2 .9 2 2v6.2l4.4-4.4a2 2 0 1 1 2.8 2.8L36.8 25h6.2a2 2 0 1 1 0 4h-6.2l4.4 4.4a2 2 0 1 1-2.8 2.8L34 31.8v6.2a2 2 0 1 1-4 0v-6.2l-4.4 4.4a2 2 0 1 1-2.8-2.8l4.4-4.4H21a2 2 0 1 1 0-4h6.2l-4.4-4.4a2 2 0 1 1 2.8-2.8l4.4 4.4v-6.2c0-1.1.9-2 2-2Z" fill="url(#dsm-spark)"/>
+  <circle cx="21.5" cy="46.5" r="3.2" fill="#ffffff" opacity="0.92"/>
+  <circle cx="32" cy="49.5" r="2.4" fill="#ffffff" opacity="0.72"/>
+  <circle cx="42.5" cy="46.5" r="3.2" fill="#ffffff" opacity="0.92"/>
+  <path d="M24.2 46.1 29.8 48.3M39.8 46.1 34.2 48.3" stroke="#ffffff" stroke-opacity="0.65" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

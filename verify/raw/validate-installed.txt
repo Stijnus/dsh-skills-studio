@@ -1,0 +1,51 @@
+FAIL accessibility                      -  frontmatter: unparsable frontmatter line 5: "  author: web-quality-skills"
+FAIL computer-use                     548  description 548 chars exceeds DSH truncation cap 500
+FAIL orca-cli                         782  description 782 chars exceeds DSH truncation cap 500
+FAIL orchestration                    813  description 813 chars exceeds DSH truncation cap 500
+FAIL playwright-best-practices          -  frontmatter: unparsable frontmatter line 5: "  author: currents.dev"
+FAIL reverse-engineer-anything          -  frontmatter: unparsable frontmatter line 4: "  version: \"49\""
+FAIL supabase                           -  frontmatter: unparsable frontmatter line 4: "  author: supabase"
+FAIL supabase-postgres-best-practices   -  frontmatter: unparsable frontmatter line 5: "  author: supabase"
+FAIL vercel-react-best-practices        -  frontmatter: unparsable frontmatter line 5: "  author: vercel"
+FAIL vibe-to-ui                         -  frontmatter: unparsable frontmatter line 12: "  author: MonkeyUI"
+FAIL web-design-guidelines              -  frontmatter: unparsable frontmatter line 4: "  author: vercel"
+WARN code-review                      419  description 419 chars over pack budget 200; body should start with an H1 "# <name>"
+WARN find-skills                      303  description 303 chars over pack budget 200
+WARN playwright-cli                    77  description 77 chars under pack budget 120 (thin routing signal); unknown frontmatter key "allowed-tools" (ignored by DSH)
+OK   ds-adopt                         150  
+OK   ds-audit                         111  
+OK   ds-best                           85  
+OK   ds-best-of-n                     193  
+OK   ds-blast-radius                  173  
+OK   ds-blueprint                     192  
+OK   ds-catchup                       166  
+OK   ds-context                        85  
+OK   ds-context-reset                 188  
+OK   ds-design                        192  
+OK   ds-design-audit                  195  
+OK   ds-explain                       166  
+OK   ds-help                          173  
+OK   ds-jury                          183  
+OK   ds-ledger                        183  
+OK   ds-lessons                       176  
+OK   ds-mode                          162  
+OK   ds-plan                           96  
+OK   ds-plan-loop                     182  
+OK   ds-pr                            153  
+OK   ds-pr-comments                   168  
+OK   ds-principles                    184  
+OK   ds-ready                         146  
+OK   ds-review                        114  
+OK   ds-review-loop                   187  
+OK   ds-revive                        156  
+OK   ds-sharpen                       192  
+OK   ds-ship                          156  
+OK   ds-swarm                         183  
+OK   ds-tdd                           174  
+OK   ds-unslop                        167  
+OK   ds-unstick                       187  
+OK   ds-verify                         94  
+OK   ds-verify-loop                   196  
+OK   ds-watch-pr                      165  
+
+49 skills | 11 FAIL | 3 WARN | catalog 8815 chars (~2449 tokens per session) | 6 gesture-only (0 catalog cost)

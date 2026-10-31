@@ -1,0 +1,1974 @@
+{
+  "tool": "audit-roots.mjs",
+  "version": 1,
+  "generatedAt": "2026-10-31T11:43:42.305Z",
+  "readOnly": true,
+  "contract": "DSH 0.2.1-rc.5 @deepseek-ai/dsh-skill-filesystem + @deepseek-ai/dsh-skill + @deepseek-ai/dsh-tool-skill",
+  "yamlParser": "module:/tmp/dsm-audit/yaml-pkg/dsh/node_modules/yaml/dist/index.js",
+  "inputs": {
+    "agentsHome": "/Users/stijnus/.agents",
+    "dshHome": "/Users/stijnus/.dsh",
+    "projects": [
+      "/Users/stijnus/Documents/deepseek-harness/default-workspace"
+    ],
+    "manifest": "/Users/stijnus/.agents/.ds-stack-manifest.json",
+    "lock": "/Users/stijnus/.agents/.skill-lock.json",
+    "catalogMax": 500
+  },
+  "roots": [
+    {
+      "id": "project-dsh:/Users/stijnus/Documents/deepseek-harness/default-workspace",
+      "source": "project-dsh",
+      "rank": 100,
+      "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/.dsh/skills",
+      "exists": false,
+      "skipSystem": false,
+      "entries": [],
+      "ignored": [],
+      "counts": {
+        "entries": 0,
+        "bundles": 0,
+        "flat": 0,
+        "valid": 0,
+        "invalid": 0,
+        "modelInvocable": 0,
+        "userOnly": 0
+      }
+    },
+    {
+      "id": "project-agents:/Users/stijnus/Documents/deepseek-harness/default-workspace",
+      "source": "project-agents",
+      "rank": 200,
+      "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/.agents/skills",
+      "exists": false,
+      "skipSystem": false,
+      "entries": [],
+      "ignored": [],
+      "counts": {
+        "entries": 0,
+        "bundles": 0,
+        "flat": 0,
+        "valid": 0,
+        "invalid": 0,
+        "modelInvocable": 0,
+        "userOnly": 0
+      }
+    },
+    {
+      "id": "user-dsh",
+      "source": "user-dsh",
+      "rank": 400,
+      "path": "/Users/stijnus/.dsh/skills",
+      "exists": true,
+      "skipSystem": true,
+      "entries": [],
+      "ignored": [],
+      "counts": {
+        "entries": 0,
+        "bundles": 0,
+        "flat": 0,
+        "valid": 0,
+        "invalid": 0,
+        "modelInvocable": 0,
+        "userOnly": 0
+      }
+    },
+    {
+      "id": "user-agents",
+      "source": "user-agents",
+      "rank": 500,
+      "path": "/Users/stijnus/.agents/skills",
+      "exists": true,
+      "skipSystem": false,
+      "entries": [
+        {
+          "entry": "accessibility",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/accessibility/SKILL.md",
+          "name": "accessibility",
+          "nameMatchesEntry": true,
+          "descriptionChars": 212,
+          "descriptionNormalizedChars": 212,
+          "catalogDescriptionChars": 212,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "license",
+            "metadata",
+            "name"
+          ],
+          "unknownKeys": [
+            "license"
+          ],
+          "legacyKeys": [],
+          "bodyBytes": 14035,
+          "bodyLines": 457,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "267fb2a0707d6142f2871f22688203a42ba21291a2aa200fb740936e41362b5d",
+          "bytes": 14358,
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "unknown frontmatter key \"license\" (ignored by DSH)"
+          ]
+        },
+        {
+          "entry": "code-review",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/code-review/SKILL.md",
+          "name": "code-review",
+          "nameMatchesEntry": true,
+          "descriptionChars": 417,
+          "descriptionNormalizedChars": 417,
+          "catalogDescriptionChars": 417,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 6209,
+          "bodyLines": 86,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": false,
+          "sha256": "09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357",
+          "bytes": 6670,
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "body does not start with an H1 \"# ...\""
+          ]
+        },
+        {
+          "entry": "computer-use",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/computer-use/SKILL.md",
+          "name": "computer-use",
+          "nameMatchesEntry": true,
+          "descriptionChars": 548,
+          "descriptionNormalizedChars": 548,
+          "catalogDescriptionChars": 500,
+          "catalogTruncated": true,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2864,
+          "bodyLines": 65,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "c60831070eebfb66beaf4ceaa4501b8186dc47658227de67350d4776ea6f81fe",
+          "bytes": 3472,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-adopt",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-adopt/SKILL.md",
+          "name": "ds-adopt",
+          "nameMatchesEntry": true,
+          "descriptionChars": 150,
+          "descriptionNormalizedChars": 150,
+          "catalogDescriptionChars": 150,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2508,
+          "bodyLines": 43,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "cc0b3540ac63bf42109d92f39798d5c8371b00c4c08c0245d167556239553273",
+          "bytes": 2697,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-audit.md",
+          "kind": "flat",
+          "path": "/Users/stijnus/.agents/skills/ds-audit.md",
+          "name": "ds-audit",
+          "nameMatchesEntry": true,
+          "descriptionChars": 111,
+          "descriptionNormalizedChars": 111,
+          "catalogDescriptionChars": 111,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": false,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "disable-model-invocation",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 117,
+          "bodyLines": 5,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "6fccad804c205929db55f656e59c34f88b88d9ca79a7dc1921b10e53180268ea",
+          "bytes": 298,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-best-of-n",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-best-of-n/SKILL.md",
+          "name": "ds-best-of-n",
+          "nameMatchesEntry": true,
+          "descriptionChars": 193,
+          "descriptionNormalizedChars": 193,
+          "catalogDescriptionChars": 193,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2235,
+          "bodyLines": 37,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "b2d0d3ebbd9f72657a5f1fd6ac56d34f61fa39a2be8cd430588ad2c805014ac3",
+          "bytes": 2471,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-best.md",
+          "kind": "flat",
+          "path": "/Users/stijnus/.agents/skills/ds-best.md",
+          "name": "ds-best",
+          "nameMatchesEntry": true,
+          "descriptionChars": 85,
+          "descriptionNormalizedChars": 85,
+          "catalogDescriptionChars": 85,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": false,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "disable-model-invocation",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 113,
+          "bodyLines": 5,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "bb50f8ba0937a39c0db648bf98af870f309b992a66680caddbd06a17e88216e1",
+          "bytes": 267,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-blast-radius",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-blast-radius/SKILL.md",
+          "name": "ds-blast-radius",
+          "nameMatchesEntry": true,
+          "descriptionChars": 173,
+          "descriptionNormalizedChars": 173,
+          "catalogDescriptionChars": 173,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2064,
+          "bodyLines": 37,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "231ada25477dc7cf21145a9a7cfb87140f53042b1eb5267428e44c9e9ff31783",
+          "bytes": 2283,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-blueprint",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-blueprint/SKILL.md",
+          "name": "ds-blueprint",
+          "nameMatchesEntry": true,
+          "descriptionChars": 192,
+          "descriptionNormalizedChars": 192,
+          "catalogDescriptionChars": 192,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2238,
+          "bodyLines": 35,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "6174bf96d2b029284bd3c28698b6a33d75a000b3b7f6cf8cb874e92ac620fee1",
+          "bytes": 2473,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-catchup",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-catchup/SKILL.md",
+          "name": "ds-catchup",
+          "nameMatchesEntry": true,
+          "descriptionChars": 166,
+          "descriptionNormalizedChars": 166,
+          "catalogDescriptionChars": 166,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 1863,
+          "bodyLines": 34,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "0ece84a04598e41b38010fdf22df219ca27c1ba28c93d63bf49bb3d783135511",
+          "bytes": 2070,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-context-reset",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-context-reset/SKILL.md",
+          "name": "ds-context-reset",
+          "nameMatchesEntry": true,
+          "descriptionChars": 188,
+          "descriptionNormalizedChars": 188,
+          "catalogDescriptionChars": 188,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2754,
+          "bodyLines": 42,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "5eb4520eba3a091e553889f5bb11672fb6f97e408f5769bf95fc5d4afbbe2a13",
+          "bytes": 2989,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-context.md",
+          "kind": "flat",
+          "path": "/Users/stijnus/.agents/skills/ds-context.md",
+          "name": "ds-context",
+          "nameMatchesEntry": true,
+          "descriptionChars": 85,
+          "descriptionNormalizedChars": 85,
+          "catalogDescriptionChars": 85,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": false,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "disable-model-invocation",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 120,
+          "bodyLines": 5,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "4c1fef1d2f34a824cbd265d40550a2b440b1fc9b2cbe9e41b8c4bbca4a4ac008",
+          "bytes": 277,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-design",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-design/SKILL.md",
+          "name": "ds-design",
+          "nameMatchesEntry": true,
+          "descriptionChars": 192,
+          "descriptionNormalizedChars": 192,
+          "catalogDescriptionChars": 192,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 3829,
+          "bodyLines": 59,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "25e5ab15e31692ae0df098108a882cf278f1db6d846ecfb6cdcb4fce3a6c9c7d",
+          "bytes": 4061,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-design-audit",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-design-audit/SKILL.md",
+          "name": "ds-design-audit",
+          "nameMatchesEntry": true,
+          "descriptionChars": 195,
+          "descriptionNormalizedChars": 195,
+          "catalogDescriptionChars": 195,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 3495,
+          "bodyLines": 46,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "2a20fc6d229d36f9387d40a97304e6f2f9c4d39de29aa0f6fc331f6995798c6a",
+          "bytes": 3736,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-explain",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-explain/SKILL.md",
+          "name": "ds-explain",
+          "nameMatchesEntry": true,
+          "descriptionChars": 166,
+          "descriptionNormalizedChars": 166,
+          "catalogDescriptionChars": 166,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 1609,
+          "bodyLines": 26,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "ba8e169722e0beefabfa20b5cf76bff6102422808c636385f39c7c51a049760b",
+          "bytes": 1816,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-help",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-help/SKILL.md",
+          "name": "ds-help",
+          "nameMatchesEntry": true,
+          "descriptionChars": 173,
+          "descriptionNormalizedChars": 173,
+          "catalogDescriptionChars": 173,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 1853,
+          "bodyLines": 49,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "bdadf1a10477a436f0acefd385d9d9eed4e65e1552e25dcb1ed51dc91f1bfcb7",
+          "bytes": 2064,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-jury",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-jury/SKILL.md",
+          "name": "ds-jury",
+          "nameMatchesEntry": true,
+          "descriptionChars": 183,
+          "descriptionNormalizedChars": 183,
+          "catalogDescriptionChars": 183,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2976,
+          "bodyLines": 41,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "d7e80b6714e74fcff49e1dfeb7eb822cf73e3cb0fb918412f7a0e4137b07bcff",
+          "bytes": 3199,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-ledger",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-ledger/SKILL.md",
+          "name": "ds-ledger",
+          "nameMatchesEntry": true,
+          "descriptionChars": 183,
+          "descriptionNormalizedChars": 183,
+          "catalogDescriptionChars": 183,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2134,
+          "bodyLines": 41,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "c9fa7169a5c0318c7c55b344ef325ecc92a41a87fc9f9b6371c52989b7585dfe",
+          "bytes": 2357,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-lessons",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-lessons/SKILL.md",
+          "name": "ds-lessons",
+          "nameMatchesEntry": true,
+          "descriptionChars": 176,
+          "descriptionNormalizedChars": 176,
+          "catalogDescriptionChars": 176,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2257,
+          "bodyLines": 38,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "22cb3a9c5ad2acb5fae78e67b91c4b9b5e3d2fbe9a5018df26247d3abce82b31",
+          "bytes": 2474,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-mode",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-mode/SKILL.md",
+          "name": "ds-mode",
+          "nameMatchesEntry": true,
+          "descriptionChars": 162,
+          "descriptionNormalizedChars": 162,
+          "catalogDescriptionChars": 162,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 3190,
+          "bodyLines": 56,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "d3e7001c20f8c00cd8e2c6407a8267659566c38b4023bab2e05f56ac7109bc3d",
+          "bytes": 3390,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-plan-loop",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-plan-loop/SKILL.md",
+          "name": "ds-plan-loop",
+          "nameMatchesEntry": true,
+          "descriptionChars": 182,
+          "descriptionNormalizedChars": 182,
+          "catalogDescriptionChars": 182,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 3153,
+          "bodyLines": 47,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "8d662e94efc1bd5d50e975502d30b4d876db870d6dbbd0cdc3d6aef2dbabb0a1",
+          "bytes": 3378,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-plan.md",
+          "kind": "flat",
+          "path": "/Users/stijnus/.agents/skills/ds-plan.md",
+          "name": "ds-plan",
+          "nameMatchesEntry": true,
+          "descriptionChars": 96,
+          "descriptionNormalizedChars": 96,
+          "catalogDescriptionChars": 96,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": false,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "disable-model-invocation",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 113,
+          "bodyLines": 5,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "b02a590cc47390f9fd1d1494a7fe5c8d7f23bb668f77b76e42a5fe25c5de59bb",
+          "bytes": 278,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-pr",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-pr/SKILL.md",
+          "name": "ds-pr",
+          "nameMatchesEntry": true,
+          "descriptionChars": 153,
+          "descriptionNormalizedChars": 153,
+          "catalogDescriptionChars": 153,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2325,
+          "bodyLines": 41,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "52a45cd7288978752f5429036738fc924bf364d346065061d2d449502dad9e4e",
+          "bytes": 2514,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-pr-comments",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-pr-comments/SKILL.md",
+          "name": "ds-pr-comments",
+          "nameMatchesEntry": true,
+          "descriptionChars": 168,
+          "descriptionNormalizedChars": 168,
+          "catalogDescriptionChars": 168,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 1938,
+          "bodyLines": 46,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "4c40086a1caa98c35d507074de10bf1d56a388633c041db2f3569aa669c37d98",
+          "bytes": 2151,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-principles",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-principles/SKILL.md",
+          "name": "ds-principles",
+          "nameMatchesEntry": true,
+          "descriptionChars": 184,
+          "descriptionNormalizedChars": 184,
+          "catalogDescriptionChars": 184,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 3642,
+          "bodyLines": 44,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "df4dc17ea393f0084948d15a4f10b1bff2a41db1cf64e36441256e5ba8c44348",
+          "bytes": 3870,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-ready",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-ready/SKILL.md",
+          "name": "ds-ready",
+          "nameMatchesEntry": true,
+          "descriptionChars": 146,
+          "descriptionNormalizedChars": 146,
+          "catalogDescriptionChars": 146,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2137,
+          "bodyLines": 40,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "051042d10e43fddb37f44848dcd9833afb61d59a4e2d7827dfc7ab5e7009707d",
+          "bytes": 2322,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-review-loop",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-review-loop/SKILL.md",
+          "name": "ds-review-loop",
+          "nameMatchesEntry": true,
+          "descriptionChars": 187,
+          "descriptionNormalizedChars": 187,
+          "catalogDescriptionChars": 187,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 3230,
+          "bodyLines": 52,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "8b32842fd0a9d06a38b04990d71b9b2ff7d787d7040ad771f8087c9b606b5efb",
+          "bytes": 3464,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-review.md",
+          "kind": "flat",
+          "path": "/Users/stijnus/.agents/skills/ds-review.md",
+          "name": "ds-review",
+          "nameMatchesEntry": true,
+          "descriptionChars": 114,
+          "descriptionNormalizedChars": 114,
+          "catalogDescriptionChars": 114,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": false,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "disable-model-invocation",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 117,
+          "bodyLines": 5,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "41bb58968a7c5fcb526f3acc97bb9ffc965f82ba95e7d7db3290f6895d463475",
+          "bytes": 302,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-revive",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-revive/SKILL.md",
+          "name": "ds-revive",
+          "nameMatchesEntry": true,
+          "descriptionChars": 156,
+          "descriptionNormalizedChars": 156,
+          "catalogDescriptionChars": 156,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2913,
+          "bodyLines": 52,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "abc12cf6c99098ea982c75194d0e57960531761037d542ffe855698eb2c77f0f",
+          "bytes": 3109,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-sharpen",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-sharpen/SKILL.md",
+          "name": "ds-sharpen",
+          "nameMatchesEntry": true,
+          "descriptionChars": 192,
+          "descriptionNormalizedChars": 192,
+          "catalogDescriptionChars": 192,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 1939,
+          "bodyLines": 37,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "0c19dbb13d494b5348508b42c3a5b584a7910a7d157f43ba782135f74a04ac19",
+          "bytes": 2172,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-ship",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-ship/SKILL.md",
+          "name": "ds-ship",
+          "nameMatchesEntry": true,
+          "descriptionChars": 156,
+          "descriptionNormalizedChars": 156,
+          "catalogDescriptionChars": 156,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 3196,
+          "bodyLines": 49,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "f429da23531e89bf6d2ac97f6cb6cae002bb8d3a650697efba44f6b1f9aedc11",
+          "bytes": 3390,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-swarm",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-swarm/SKILL.md",
+          "name": "ds-swarm",
+          "nameMatchesEntry": true,
+          "descriptionChars": 183,
+          "descriptionNormalizedChars": 183,
+          "catalogDescriptionChars": 183,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2210,
+          "bodyLines": 39,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "3b2f86d611f8c7d5cef7e3e9aafe27cae2046267253f1fe7591b3c441974583d",
+          "bytes": 2432,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-tdd",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-tdd/SKILL.md",
+          "name": "ds-tdd",
+          "nameMatchesEntry": true,
+          "descriptionChars": 174,
+          "descriptionNormalizedChars": 174,
+          "catalogDescriptionChars": 174,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 1814,
+          "bodyLines": 33,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "9f9b28f099c2610f9891ef08d46265b9e9b702e8f9c15d6ca8feae25b55a83fa",
+          "bytes": 2025,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-unslop",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-unslop/SKILL.md",
+          "name": "ds-unslop",
+          "nameMatchesEntry": true,
+          "descriptionChars": 167,
+          "descriptionNormalizedChars": 167,
+          "catalogDescriptionChars": 167,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2719,
+          "bodyLines": 57,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "5d48576afb62a9b1757e02b1ae46a357d2c0c497230855620a01d8366181d462",
+          "bytes": 2926,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-unstick",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-unstick/SKILL.md",
+          "name": "ds-unstick",
+          "nameMatchesEntry": true,
+          "descriptionChars": 187,
+          "descriptionNormalizedChars": 187,
+          "catalogDescriptionChars": 187,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2825,
+          "bodyLines": 41,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "5e27a9986c2ca481710f8c445a981f681a9bf11b14a8ad934ed2c6f39a5436bd",
+          "bytes": 3053,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-verify-loop",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-verify-loop/SKILL.md",
+          "name": "ds-verify-loop",
+          "nameMatchesEntry": true,
+          "descriptionChars": 196,
+          "descriptionNormalizedChars": 196,
+          "catalogDescriptionChars": 196,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2453,
+          "bodyLines": 40,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "62ae7cfcf9c9c350c4a5db600f0a1c7b97b1a189bd6e1f44e88853340a800fa9",
+          "bytes": 2694,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-verify.md",
+          "kind": "flat",
+          "path": "/Users/stijnus/.agents/skills/ds-verify.md",
+          "name": "ds-verify",
+          "nameMatchesEntry": true,
+          "descriptionChars": 94,
+          "descriptionNormalizedChars": 94,
+          "catalogDescriptionChars": 94,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": false,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "disable-model-invocation",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 117,
+          "bodyLines": 5,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "4d2f7eb60c6f96367bc168aa33ccdba24726781c749482eca9a3dbc9fa807851",
+          "bytes": 282,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "ds-watch-pr",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/ds-watch-pr/SKILL.md",
+          "name": "ds-watch-pr",
+          "nameMatchesEntry": true,
+          "descriptionChars": 165,
+          "descriptionNormalizedChars": 165,
+          "catalogDescriptionChars": 165,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 2899,
+          "bodyLines": 49,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "fe397a54f4eb65ebc8ec5f0e3fafb5b525fc8d2ee494f56b92ff9b8fd838155e",
+          "bytes": 3106,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "find-skills",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/find-skills/SKILL.md",
+          "name": "find-skills",
+          "nameMatchesEntry": true,
+          "descriptionChars": 303,
+          "descriptionNormalizedChars": 303,
+          "catalogDescriptionChars": 303,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 5129,
+          "bodyLines": 138,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
+          "bytes": 5472,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "orca-cli",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/orca-cli/SKILL.md",
+          "name": "orca-cli",
+          "nameMatchesEntry": true,
+          "descriptionChars": 782,
+          "descriptionNormalizedChars": 782,
+          "catalogDescriptionChars": 500,
+          "catalogTruncated": true,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 3069,
+          "bodyLines": 65,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "ed609615d7fcefc30509b54a55a5513991f0dc45d817a1e12918f05eb4846012",
+          "bytes": 3913,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "orchestration",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/orchestration/SKILL.md",
+          "name": "orchestration",
+          "nameMatchesEntry": true,
+          "descriptionChars": 813,
+          "descriptionNormalizedChars": 813,
+          "catalogDescriptionChars": 500,
+          "catalogTruncated": true,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 3340,
+          "bodyLines": 68,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "9ca228137b9a442b98c761aa07adecc2265708132ab175ad7e22b163fdc0bd7f",
+          "bytes": 4220,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "playwright-best-practices",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/playwright-best-practices/SKILL.md",
+          "name": "playwright-best-practices",
+          "nameMatchesEntry": true,
+          "descriptionChars": 984,
+          "descriptionNormalizedChars": 984,
+          "catalogDescriptionChars": 500,
+          "catalogTruncated": true,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "license",
+            "metadata",
+            "name"
+          ],
+          "unknownKeys": [
+            "license"
+          ],
+          "legacyKeys": [],
+          "bodyBytes": 25205,
+          "bodyLines": 296,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "42684b93abd595551d6f4b6949b951645503baa445aefa76aa2f0d52ddda2bf7",
+          "bytes": 26306,
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "unknown frontmatter key \"license\" (ignored by DSH)"
+          ]
+        },
+        {
+          "entry": "playwright-cli",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/playwright-cli/SKILL.md",
+          "name": "playwright-cli",
+          "nameMatchesEntry": true,
+          "descriptionChars": 77,
+          "descriptionNormalizedChars": 77,
+          "catalogDescriptionChars": 77,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "allowed-tools",
+            "description",
+            "name"
+          ],
+          "unknownKeys": [
+            "allowed-tools"
+          ],
+          "legacyKeys": [],
+          "bodyBytes": 15211,
+          "bodyLines": 485,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "9bba755285a4c9ad72a4a41b9c7baef6fb516d329c0b44ed0573715f4479b906",
+          "bytes": 15428,
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "unknown frontmatter key \"allowed-tools\" (ignored by DSH)"
+          ]
+        },
+        {
+          "entry": "reverse-engineer-anything",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/reverse-engineer-anything/SKILL.md",
+          "name": "reverse-engineer-anything",
+          "nameMatchesEntry": true,
+          "descriptionChars": 403,
+          "descriptionNormalizedChars": 403,
+          "catalogDescriptionChars": 403,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "metadata",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 34715,
+          "bodyLines": 500,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "8818b645c9fd348399a50a8678b91cff20215690adad484e70282ff9f2ef91ee",
+          "bytes": 35216,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "supabase",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/supabase/SKILL.md",
+          "name": "supabase",
+          "nameMatchesEntry": true,
+          "descriptionChars": 788,
+          "descriptionNormalizedChars": 788,
+          "catalogDescriptionChars": 500,
+          "catalogTruncated": true,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "metadata",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 13432,
+          "bodyLines": 149,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "697e0e949f97621c6fc1784169eb3ccbf673747d6bb8299a52962d3d84d93dc6",
+          "bytes": 14307,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "supabase-postgres-best-practices",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/supabase-postgres-best-practices/SKILL.md",
+          "name": "supabase-postgres-best-practices",
+          "nameMatchesEntry": true,
+          "descriptionChars": 834,
+          "descriptionNormalizedChars": 834,
+          "catalogDescriptionChars": 500,
+          "catalogTruncated": true,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "license",
+            "metadata",
+            "name"
+          ],
+          "unknownKeys": [
+            "license"
+          ],
+          "legacyKeys": [],
+          "bodyBytes": 1767,
+          "bodyLines": 54,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "ad65e776f45e761bafc609d3f506c77c1032225aa65e0c4c02f241b8071e5855",
+          "bytes": 3231,
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "unknown frontmatter key \"license\" (ignored by DSH)"
+          ]
+        },
+        {
+          "entry": "vercel-react-best-practices",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/vercel-react-best-practices/SKILL.md",
+          "name": "vercel-react-best-practices",
+          "nameMatchesEntry": true,
+          "descriptionChars": 329,
+          "descriptionNormalizedChars": 329,
+          "catalogDescriptionChars": 329,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "license",
+            "metadata",
+            "name"
+          ],
+          "unknownKeys": [
+            "license"
+          ],
+          "legacyKeys": [],
+          "bodyBytes": 6807,
+          "bodyLines": 142,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355",
+          "bytes": 7251,
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "unknown frontmatter key \"license\" (ignored by DSH)"
+          ]
+        },
+        {
+          "entry": "vibe-to-ui",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/vibe-to-ui/SKILL.md",
+          "name": "vibe-to-ui",
+          "nameMatchesEntry": true,
+          "descriptionChars": 611,
+          "descriptionNormalizedChars": 611,
+          "catalogDescriptionChars": 500,
+          "catalogTruncated": true,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "metadata",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 54338,
+          "bodyLines": 501,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "560523b97bbdade346059027019d285c9585dea54fedd72fe32933388070456f",
+          "bytes": 55055,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "entry": "web-design-guidelines",
+          "kind": "bundle",
+          "path": "/Users/stijnus/.agents/skills/web-design-guidelines/SKILL.md",
+          "name": "web-design-guidelines",
+          "nameMatchesEntry": true,
+          "descriptionChars": 184,
+          "descriptionNormalizedChars": 184,
+          "catalogDescriptionChars": 184,
+          "catalogTruncated": false,
+          "descriptionMultiline": false,
+          "invocation": {
+            "modelInvocable": true,
+            "userInvocable": true
+          },
+          "frontmatterKeys": [
+            "description",
+            "metadata",
+            "name"
+          ],
+          "unknownKeys": [],
+          "legacyKeys": [],
+          "bodyBytes": 916,
+          "bodyLines": 32,
+          "bodyEmpty": false,
+          "bodyStartsWithH1": true,
+          "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f",
+          "bytes": 1231,
+          "valid": true,
+          "errors": [],
+          "warnings": []
+        }
+      ],
+      "ignored": [],
+      "counts": {
+        "entries": 49,
+        "bundles": 43,
+        "flat": 6,
+        "valid": 49,
+        "invalid": 0,
+        "modelInvocable": 43,
+        "userOnly": 6
+      }
+    }
+  ],
+  "summary": {
+    "totals": {
+      "rootsScanned": 4,
+      "rootsPresent": 2,
+      "entries": 49,
+      "bundles": 43,
+      "flat": 6,
+      "valid": 49,
+      "invalid": 0,
+      "modelInvocable": 43,
+      "userOnly": 6,
+      "ignored": 0,
+      "catalogNameChars": 527,
+      "catalogDescriptionChars": 10513,
+      "catalogCharEstimate": 11298,
+      "catalogTokenEstimate": 3138
+    },
+    "sizes": {
+      "files": 49,
+      "totalBytes": 278520,
+      "minBytes": 267,
+      "maxBytes": 55055
+    },
+    "duplicates": [],
+    "sameRootDuplicates": [],
+    "aliasCollisions": [],
+    "nameMismatches": [],
+    "truncatedDescriptions": [
+      {
+        "root": "user-agents",
+        "name": "computer-use",
+        "descriptionChars": 548,
+        "normalizedChars": 548,
+        "catalogChars": 500
+      },
+      {
+        "root": "user-agents",
+        "name": "orca-cli",
+        "descriptionChars": 782,
+        "normalizedChars": 782,
+        "catalogChars": 500
+      },
+      {
+        "root": "user-agents",
+        "name": "orchestration",
+        "descriptionChars": 813,
+        "normalizedChars": 813,
+        "catalogChars": 500
+      },
+      {
+        "root": "user-agents",
+        "name": "playwright-best-practices",
+        "descriptionChars": 984,
+        "normalizedChars": 984,
+        "catalogChars": 500
+      },
+      {
+        "root": "user-agents",
+        "name": "supabase",
+        "descriptionChars": 788,
+        "normalizedChars": 788,
+        "catalogChars": 500
+      },
+      {
+        "root": "user-agents",
+        "name": "supabase-postgres-best-practices",
+        "descriptionChars": 834,
+        "normalizedChars": 834,
+        "catalogChars": 500
+      },
+      {
+        "root": "user-agents",
+        "name": "vibe-to-ui",
+        "descriptionChars": 611,
+        "normalizedChars": 611,
+        "catalogChars": 500
+      }
+    ],
+    "invalidEntries": [],
+    "ignoredEntries": [],
+    "warnings": [
+      {
+        "root": "user-agents",
+        "name": "accessibility",
+        "entry": "accessibility",
+        "kind": "bundle",
+        "warnings": [
+          "unknown frontmatter key \"license\" (ignored by DSH)"
+        ]
+      },
+      {
+        "root": "user-agents",
+        "name": "code-review",
+        "entry": "code-review",
+        "kind": "bundle",
+        "warnings": [
+          "body does not start with an H1 \"# ...\""
+        ]
+      },
+      {
+        "root": "user-agents",
+        "name": "playwright-best-practices",
+        "entry": "playwright-best-practices",
+        "kind": "bundle",
+        "warnings": [
+          "unknown frontmatter key \"license\" (ignored by DSH)"
+        ]
+      },
+      {
+        "root": "user-agents",
+        "name": "playwright-cli",
+        "entry": "playwright-cli",
+        "kind": "bundle",
+        "warnings": [
+          "unknown frontmatter key \"allowed-tools\" (ignored by DSH)"
+        ]
+      },
+      {
+        "root": "user-agents",
+        "name": "supabase-postgres-best-practices",
+        "entry": "supabase-postgres-best-practices",
+        "kind": "bundle",
+        "warnings": [
+          "unknown frontmatter key \"license\" (ignored by DSH)"
+        ]
+      },
+      {
+        "root": "user-agents",
+        "name": "vercel-react-best-practices",
+        "entry": "vercel-react-best-practices",
+        "kind": "bundle",
+        "warnings": [
+          "unknown frontmatter key \"license\" (ignored by DSH)"
+        ]
+      }
+    ],
+    "counts": {
+      "high": 0,
+      "medium": 8,
+      "low": 1,
+      "info": 2
+    }
+  },
+  "manifest": {
+    "path": "/Users/stijnus/.agents/.ds-stack-manifest.json",
+    "exists": true,
+    "version": 2,
+    "source": "aicodeking/deepseek-stack",
+    "upstreamCommit": "d4f1ebe72e8314c3a0c6135bb82f623c650f7218",
+    "target": "/Users/stijnus/.agents/skills",
+    "sections": {
+      "skills": 29,
+      "aliases": 6
+    },
+    "onDiskMissing": [],
+    "diskNotInManifest": [
+      "accessibility",
+      "code-review",
+      "computer-use",
+      "find-skills",
+      "orca-cli",
+      "orchestration",
+      "playwright-best-practices",
+      "playwright-cli",
+      "reverse-engineer-anything",
+      "supabase",
+      "supabase-postgres-best-practices",
+      "vercel-react-best-practices",
+      "vibe-to-ui",
+      "web-design-guidelines"
+    ],
+    "shaMismatch": [],
+    "descriptionCharsMismatch": []
+  },
+  "lock": {
+    "path": "/Users/stijnus/.agents/.skill-lock.json",
+    "exists": true,
+    "version": 3,
+    "entries": 12,
+    "onDiskMissing": [],
+    "diskNotInLock": [
+      "reverse-engineer-anything",
+      "vibe-to-ui"
+    ],
+    "lockScope": "non-pack entries (ds-* are tracked by the deepseek-stack manifest)",
+    "packEntriesNotInLock": 35
+  },
+  "sourceDrift": [
+    {
+      "label": "bundle-sources",
+      "sourceDir": "/Users/stijnus/Documents/deepseek-harness/default-workspace/ds-stack/skills",
+      "exists": true,
+      "checked": 29,
+      "match": 29,
+      "mismatch": [],
+      "missingInSource": [],
+      "extraInSource": []
+    },
+    {
+      "label": "alias-sources",
+      "sourceDir": "/Users/stijnus/Documents/deepseek-harness/default-workspace/ds-stack/aliases",
+      "exists": true,
+      "checked": 6,
+      "match": 6,
+      "mismatch": [],
+      "missingInSource": [],
+      "extraInSource": []
+    }
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "code": "description-truncated",
+      "message": "computer-use: description is 548 chars; the catalog renders 500 (cap 500, tail dropped)",
+      "evidence": {
+        "root": "user-agents",
+        "name": "computer-use",
+        "descriptionChars": 548,
+        "normalizedChars": 548,
+        "catalogChars": 500
+      }
+    },
+    {
+      "severity": "medium",
+      "code": "description-truncated",
+      "message": "orca-cli: description is 782 chars; the catalog renders 500 (cap 500, tail dropped)",
+      "evidence": {
+        "root": "user-agents",
+        "name": "orca-cli",
+        "descriptionChars": 782,
+        "normalizedChars": 782,
+        "catalogChars": 500
+      }
+    },
+    {
+      "severity": "medium",
+      "code": "description-truncated",
+      "message": "orchestration: description is 813 chars; the catalog renders 500 (cap 500, tail dropped)",
+      "evidence": {
+        "root": "user-agents",
+        "name": "orchestration",
+        "descriptionChars": 813,
+        "normalizedChars": 813,
+        "catalogChars": 500
+      }
+    },
+    {
+      "severity": "medium",
+      "code": "description-truncated",
+      "message": "playwright-best-practices: description is 984 chars; the catalog renders 500 (cap 500, tail dropped)",
+      "evidence": {
+        "root": "user-agents",
+        "name": "playwright-best-practices",
+        "descriptionChars": 984,
+        "normalizedChars": 984,
+        "catalogChars": 500
+      }
+    },
+    {
+      "severity": "medium",
+      "code": "description-truncated",
+      "message": "supabase: description is 788 chars; the catalog renders 500 (cap 500, tail dropped)",
+      "evidence": {
+        "root": "user-agents",
+        "name": "supabase",
+        "descriptionChars": 788,
+        "normalizedChars": 788,
+        "catalogChars": 500
+      }
+    },
+    {
+      "severity": "medium",
+      "code": "description-truncated",
+      "message": "supabase-postgres-best-practices: description is 834 chars; the catalog renders 500 (cap 500, tail dropped)",
+      "evidence": {
+        "root": "user-agents",
+        "name": "supabase-postgres-best-practices",
+        "descriptionChars": 834,
+        "normalizedChars": 834,
+        "catalogChars": 500
+      }
+    },
+    {
+      "severity": "medium",
+      "code": "description-truncated",
+      "message": "vibe-to-ui: description is 611 chars; the catalog renders 500 (cap 500, tail dropped)",
+      "evidence": {
+        "root": "user-agents",
+        "name": "vibe-to-ui",
+        "descriptionChars": 611,
+        "normalizedChars": 611,
+        "catalogChars": 500
+      }
+    },
+    {
+      "severity": "medium",
+      "code": "lock-drift",
+      "message": "installed non-pack skills with no lock entry (untracked by the skills CLI): reverse-engineer-anything, vibe-to-ui",
+      "evidence": "/Users/stijnus/.agents/.skill-lock.json"
+    },
+    {
+      "severity": "low",
+      "code": "unmanaged-skills",
+      "message": "installed entries not in the deepseek-stack manifest (expected only for community skills): 14",
+      "evidence": "/Users/stijnus/.agents/.ds-stack-manifest.json"
+    },
+    {
+      "severity": "info",
+      "code": "root-absent",
+      "message": "root project-dsh:/Users/stijnus/Documents/deepseek-harness/default-workspace does not exist (/Users/stijnus/Documents/deepseek-harness/default-workspace/.dsh/skills)"
+    },
+    {
+      "severity": "info",
+      "code": "root-absent",
+      "message": "root project-agents:/Users/stijnus/Documents/deepseek-harness/default-workspace does not exist (/Users/stijnus/Documents/deepseek-harness/default-workspace/.agents/skills)"
+    }
+  ]
+}

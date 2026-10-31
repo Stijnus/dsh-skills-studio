@@ -1,0 +1,1280 @@
+{
+  "tool": "e2e-api.mjs",
+  "startedAt": "2026-10-31T12:16:42.218Z",
+  "generatedAt": "2026-10-31T12:16:42.899Z",
+  "base": "http://127.0.0.1:59699",
+  "agents": "/private/tmp/dsm-verify-home/agents",
+  "writable": "/private/tmp/dsm-verify-home/agents/skills",
+  "registryExpect": "positive",
+  "summary": {
+    "total": 61,
+    "passed": 61,
+    "failed": 0
+  },
+  "results": [
+    {
+      "area": "health",
+      "id": "ok",
+      "expected": {
+        "status": 200,
+        "name": "dsh-skills-manager"
+      },
+      "observed": {
+        "status": 200,
+        "name": "dsh-skills-manager",
+        "writableRoot": "/private/tmp/dsm-verify-home/agents/skills"
+      },
+      "pass": true
+    },
+    {
+      "area": "state",
+      "id": "skill-counts",
+      "expected": {
+        "dsEntries": 35,
+        "dsBundles": 29,
+        "dsFlat": 6
+      },
+      "observed": {
+        "dsEntries": 35,
+        "dsBundles": 29,
+        "dsFlat": 6
+      },
+      "pass": true,
+      "evidence": {
+        "skills": 50,
+        "stats": {
+          "skills": 50,
+          "editable": 49,
+          "libraries": 2,
+          "catalog": 50,
+          "conflicts": 0
+        }
+      }
+    },
+    {
+      "area": "state",
+      "id": "roots",
+      "expected": {
+        "userAgentsWritable": true,
+        "readonlyCustomRootPresent": true
+      },
+      "observed": {
+        "roots": [
+          {
+            "id": "custom-1",
+            "rank": 300,
+            "writable": false,
+            "exists": true
+          },
+          {
+            "id": "user-agents",
+            "rank": 500,
+            "writable": true,
+            "exists": true
+          }
+        ],
+        "writableRoot": "/private/tmp/dsm-verify-home/agents/skills"
+      },
+      "pass": true
+    },
+    {
+      "area": "state",
+      "id": "all-valid",
+      "expected": {
+        "invalid": 0
+      },
+      "observed": {
+        "invalid": 0
+      },
+      "pass": true
+    },
+    {
+      "area": "state",
+      "id": "library-installed",
+      "expected": {
+        "dsInstalled": 29,
+        "aliasesInstalled": 6
+      },
+      "observed": {
+        "ds": 29,
+        "dsInstalled": 29,
+        "aliases": 6,
+        "aliasesInstalled": 6
+      },
+      "pass": true
+    },
+    {
+      "area": "state",
+      "id": "cache-control",
+      "expected": {
+        "cache-control": "no-store"
+      },
+      "observed": {
+        "cache-control": "no-store"
+      },
+      "pass": true
+    },
+    {
+      "area": "state",
+      "id": "catalog",
+      "expected": {
+        "available": true
+      },
+      "observed": {
+        "available": true,
+        "entries": 50,
+        "error": null
+      },
+      "pass": true,
+      "evidence": {
+        "catalogNames": [
+          "accessibility",
+          "code-review",
+          "computer-use",
+          "ds-adopt",
+          "ds-audit",
+          "ds-best",
+          "ds-best-of-n",
+          "ds-blast-radius",
+          "ds-blueprint",
+          "ds-catchup",
+          "ds-context",
+          "ds-context-reset",
+          "ds-design",
+          "ds-design-audit",
+          "ds-explain",
+          "ds-help",
+          "ds-jury",
+          "ds-ledger",
+          "ds-lessons",
+          "ds-mode",
+          "ds-plan",
+          "ds-plan-loop",
+          "ds-pr",
+          "ds-pr-comments",
+          "ds-principles",
+          "ds-ready",
+          "ds-review",
+          "ds-review-loop",
+          "ds-revive",
+          "ds-sharpen",
+          "ds-ship",
+          "ds-swarm",
+          "ds-tdd",
+          "ds-unslop",
+          "ds-unstick",
+          "ds-verify",
+          "ds-verify-loop",
+          "ds-watch-pr",
+          "find-skills",
+          "orca-cli",
+          "orchestration",
+          "playwright-best-practices",
+          "playwright-cli",
+          "plugin-only",
+          "reverse-engineer-anything",
+          "supabase",
+          "supabase-postgres-best-practices",
+          "vercel-react-best-practices",
+          "vibe-to-ui",
+          "web-design-guidelines"
+        ]
+      }
+    },
+    {
+      "area": "state",
+      "id": "plugin-catalog-entry",
+      "expected": {
+        "name": "plugin-only"
+      },
+      "observed": {
+        "names": [
+          "accessibility",
+          "code-review",
+          "computer-use",
+          "ds-adopt",
+          "ds-audit",
+          "ds-best",
+          "ds-best-of-n",
+          "ds-blast-radius",
+          "ds-blueprint",
+          "ds-catchup",
+          "ds-context",
+          "ds-context-reset",
+          "ds-design",
+          "ds-design-audit",
+          "ds-explain",
+          "ds-help",
+          "ds-jury",
+          "ds-ledger",
+          "ds-lessons",
+          "ds-mode",
+          "ds-plan",
+          "ds-plan-loop",
+          "ds-pr",
+          "ds-pr-comments",
+          "ds-principles",
+          "ds-ready",
+          "ds-review",
+          "ds-review-loop",
+          "ds-revive",
+          "ds-sharpen",
+          "ds-ship",
+          "ds-swarm",
+          "ds-tdd",
+          "ds-unslop",
+          "ds-unstick",
+          "ds-verify",
+          "ds-verify-loop",
+          "ds-watch-pr",
+          "find-skills",
+          "orca-cli",
+          "orchestration",
+          "playwright-best-practices",
+          "playwright-cli",
+          "plugin-only",
+          "reverse-engineer-anything",
+          "supabase",
+          "supabase-postgres-best-practices",
+          "vercel-react-best-practices",
+          "vibe-to-ui",
+          "web-design-guidelines"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "area": "skill-read",
+      "id": "bundle",
+      "expected": {
+        "status": 200,
+        "hasContent": true,
+        "shaMatches": true
+      },
+      "observed": {
+        "status": 200,
+        "name": "ds-mode",
+        "contentBytes": 3388,
+        "shaMatches": true
+      },
+      "pass": true
+    },
+    {
+      "area": "skill-read",
+      "id": "flat",
+      "expected": {
+        "status": 200,
+        "name": "ds-plan"
+      },
+      "observed": {
+        "status": 200,
+        "name": "ds-plan"
+      },
+      "pass": true
+    },
+    {
+      "area": "skill-read",
+      "id": "missing-404",
+      "expected": {
+        "status": 404
+      },
+      "observed": {
+        "status": 404,
+        "code": "not-found"
+      },
+      "pass": true
+    },
+    {
+      "area": "skill-read",
+      "id": "traversal-rejected",
+      "expected": [
+        400,
+        404
+      ],
+      "observed": {
+        "status": 404,
+        "code": "not-found"
+      },
+      "pass": true
+    },
+    {
+      "area": "validate",
+      "id": "valid-draft",
+      "expected": {
+        "status": 200,
+        "valid": true
+      },
+      "observed": {
+        "status": 200,
+        "valid": true,
+        "errors": []
+      },
+      "pass": true
+    },
+    {
+      "area": "validate",
+      "id": "invalid-name",
+      "expected": {
+        "status": 200,
+        "ok": false,
+        "valid": false,
+        "field": "name"
+      },
+      "observed": {
+        "status": 200,
+        "ok": false,
+        "valid": false,
+        "errors": [
+          {
+            "field": "name",
+            "code": "invalid",
+            "message": "Name must be kebab-case: lowercase letters, digits, and single hyphens."
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "area": "validate",
+      "id": "missing-description",
+      "expected": {
+        "status": 200,
+        "field": "description"
+      },
+      "observed": {
+        "status": 200,
+        "errors": [
+          {
+            "field": "description",
+            "code": "required",
+            "message": "Description is required."
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "area": "validate",
+      "id": "dotname-rejected",
+      "expected": {
+        "status": 200,
+        "ok": false
+      },
+      "observed": {
+        "status": 200,
+        "ok": false,
+        "errors": [
+          {
+            "field": "name",
+            "code": "invalid",
+            "message": "Name must be kebab-case: lowercase letters, digits, and single hyphens."
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "area": "validate",
+      "id": "traversal-name-rejected",
+      "expected": {
+        "status": 200,
+        "ok": false
+      },
+      "observed": {
+        "status": 200,
+        "ok": false
+      },
+      "pass": true
+    },
+    {
+      "area": "validate",
+      "id": "readonly-root-rejected",
+      "expected": {
+        "status": 200,
+        "field": "rootId"
+      },
+      "observed": {
+        "status": 200,
+        "errors": [
+          {
+            "field": "rootId",
+            "code": "root-not-writable",
+            "message": "Root \"readonly-skills\" is read-only."
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "area": "validate",
+      "id": "duplicate-name",
+      "expected": {
+        "status": 200,
+        "ok": false,
+        "conflict": "duplicate-name"
+      },
+      "observed": {
+        "status": 200,
+        "ok": false,
+        "conflicts": [
+          "duplicate-name"
+        ]
+      },
+      "pass": true,
+      "evidence": [
+        {
+          "code": "duplicate-name",
+          "severity": "error",
+          "name": "dup-target",
+          "message": "Same name in readonly-skills rank 300 and User (.agents) rank 500; rank 300 wins and shadows the other.",
+          "entries": [
+            {
+              "rootId": "custom-1",
+              "rootLabel": "readonly-skills",
+              "relPath": "dup-target/SKILL.md",
+              "path": "/private/tmp/dsm-verify-home/readonly-skills/dup-target/SKILL.md",
+              "rank": 300
+            },
+            {
+              "rootId": "user-agents",
+              "rootLabel": "User (.agents)",
+              "relPath": "dup-target/SKILL.md",
+              "path": "/private/tmp/dsm-verify-home/agents/skills/dup-target/SKILL.md",
+              "rank": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "validate",
+      "id": "stale-update",
+      "expected": {
+        "status": 200,
+        "stale": true
+      },
+      "observed": {
+        "status": 200,
+        "errors": [
+          {
+            "field": "expectedSha256",
+            "code": "stale",
+            "message": "The file changed on disk since it was loaded; reload the skill and try again."
+          }
+        ]
+      },
+      "pass": true,
+      "evidence": {
+        "currentSha": "d3e7001c20f8c00cd8e2c6407a8267659566c38b4023bab2e05f56ac7109bc3d"
+      }
+    },
+    {
+      "area": "save",
+      "id": "create",
+      "expected": {
+        "status": 200,
+        "visible": true,
+        "fileOnDisk": true
+      },
+      "observed": {
+        "status": 200,
+        "path": "/private/tmp/dsm-verify-home/agents/skills/verify-api-skill/SKILL.md",
+        "sha": "d41305f7fc4bdf97099459832c827dafb69d4a15931816b20d71af42d618fc99",
+        "registry": {
+          "checked": true,
+          "visible": true,
+          "provider": "verify-managed",
+          "path": "/private/tmp/dsm-verify-home/agents/skills/verify-api-skill/SKILL.md",
+          "catalogCount": 51,
+          "waitedMs": 61
+        }
+      },
+      "pass": true,
+      "evidence": {
+        "registry": {
+          "checked": true,
+          "visible": true,
+          "provider": "verify-managed",
+          "path": "/private/tmp/dsm-verify-home/agents/skills/verify-api-skill/SKILL.md",
+          "catalogCount": 51,
+          "waitedMs": 61
+        },
+        "warnings": []
+      }
+    },
+    {
+      "area": "save",
+      "id": "create-file-content",
+      "expected": {
+        "frontmatterName": "verify-api-skill",
+        "body": true
+      },
+      "observed": {
+        "content": "---\nname: verify-api-skill\ndescription: \"Verification skill created through the API E2E harness.\"\n---\n# verify-api-skill\n\nBody.\n"
+      },
+      "pass": true
+    },
+    {
+      "area": "registry",
+      "id": "visible-after-create",
+      "expected": {
+        "checked": true,
+        "visible": true
+      },
+      "observed": {
+        "checked": true,
+        "visible": true,
+        "provider": "verify-managed",
+        "path": "/private/tmp/dsm-verify-home/agents/skills/verify-api-skill/SKILL.md",
+        "catalogCount": 51,
+        "waitedMs": 61
+      },
+      "pass": true,
+      "evidence": {
+        "checked": true,
+        "visible": true,
+        "provider": "verify-managed",
+        "path": "/private/tmp/dsm-verify-home/agents/skills/verify-api-skill/SKILL.md",
+        "catalogCount": 51,
+        "waitedMs": 61
+      }
+    },
+    {
+      "area": "persistence",
+      "id": "no-temp-files",
+      "expected": [],
+      "observed": [],
+      "pass": true,
+      "label": "after-create"
+    },
+    {
+      "area": "save",
+      "id": "duplicate-blocked-before-write",
+      "expected": {
+        "status": 409,
+        "fileWritten": false
+      },
+      "observed": {
+        "status": 409,
+        "conflicts": [
+          "duplicate-name"
+        ],
+        "exists": false
+      },
+      "pass": true,
+      "evidence": [
+        {
+          "code": "duplicate-name",
+          "severity": "error",
+          "name": "dup-target",
+          "message": "Same name in readonly-skills rank 300 and User (.agents) rank 500; rank 300 wins and shadows the other.",
+          "entries": [
+            {
+              "rootId": "custom-1",
+              "rootLabel": "readonly-skills",
+              "relPath": "dup-target/SKILL.md",
+              "path": "/private/tmp/dsm-verify-home/readonly-skills/dup-target/SKILL.md",
+              "rank": 300
+            },
+            {
+              "rootId": "user-agents",
+              "rootLabel": "User (.agents)",
+              "relPath": "dup-target/SKILL.md",
+              "path": "/private/tmp/dsm-verify-home/agents/skills/dup-target/SKILL.md",
+              "rank": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "save",
+      "id": "force-duplicate-writes",
+      "expected": {
+        "status": 200,
+        "fileWritten": true
+      },
+      "observed": {
+        "status": 200,
+        "path": "/private/tmp/dsm-verify-home/agents/skills/dup-target/SKILL.md",
+        "exists": true
+      },
+      "pass": true,
+      "evidence": {
+        "warnings": [
+          {
+            "code": "overlap",
+            "severity": "warning",
+            "name": "dup-target",
+            "message": "Descriptions overlap (Jaccard 1.00; shared words: api, created, e2e, harness, through, verification); \"dup-target\" and \"verify-api-skill\" may compete for the same requests.",
+            "entries": [
+              {
+                "rootId": "user-agents",
+                "rootLabel": "User (.agents)",
+                "relPath": "dup-target/SKILL.md",
+                "path": "/private/tmp/dsm-verify-home/agents/skills/dup-target/SKILL.md",
+                "rank": 500
+              },
+              {
+                "rootId": "user-agents",
+                "rootLabel": "User (.agents)",
+                "relPath": "verify-api-skill/SKILL.md",
+                "path": "/private/tmp/dsm-verify-home/agents/skills/verify-api-skill/SKILL.md",
+                "rank": 500
+              }
+            ],
+            "sharedWords": [
+              "api",
+              "created",
+              "e2e",
+              "harness",
+              "through",
+              "verification"
+            ]
+          },
+          {
+            "code": "duplicate-name",
+            "severity": "error",
+            "name": "dup-target",
+            "message": "Same name in readonly-skills rank 300 and User (.agents) rank 500; rank 300 wins and shadows the other.",
+            "entries": [
+              {
+                "rootId": "custom-1",
+                "rootLabel": "readonly-skills",
+                "relPath": "dup-target/SKILL.md",
+                "path": "/private/tmp/dsm-verify-home/readonly-skills/dup-target/SKILL.md",
+                "rank": 300
+              },
+              {
+                "rootId": "user-agents",
+                "rootLabel": "User (.agents)",
+                "relPath": "dup-target/SKILL.md",
+                "path": "/private/tmp/dsm-verify-home/agents/skills/dup-target/SKILL.md",
+                "rank": 500
+              }
+            ]
+          }
+        ],
+        "registry": {
+          "checked": true,
+          "visible": true,
+          "provider": "verify-managed",
+          "path": "/private/tmp/dsm-verify-home/agents/skills/dup-target/SKILL.md",
+          "catalogCount": 52,
+          "waitedMs": 8
+        }
+      }
+    },
+    {
+      "area": "save",
+      "id": "force-duplicate-cleanup",
+      "expected": {
+        "status": 200
+      },
+      "observed": {
+        "status": 200,
+        "removed": {
+          "rootId": "user-agents",
+          "relPath": "dup-target/SKILL.md",
+          "name": "dup-target"
+        }
+      },
+      "pass": true
+    },
+    {
+      "area": "save",
+      "id": "update-correct-sha",
+      "expected": {
+        "status": 200,
+        "shaChanged": true,
+        "contentUpdated": true
+      },
+      "observed": {
+        "status": 200,
+        "shaChanged": true,
+        "content": true
+      },
+      "pass": true,
+      "evidence": {
+        "registry": {
+          "checked": true,
+          "visible": true,
+          "provider": "verify-managed",
+          "path": "/private/tmp/dsm-verify-home/agents/skills/verify-api-skill/SKILL.md",
+          "catalogCount": 51,
+          "waitedMs": 0
+        }
+      }
+    },
+    {
+      "area": "save",
+      "id": "stale-update-rejected",
+      "expected": {
+        "status": 422,
+        "unchanged": true
+      },
+      "observed": {
+        "status": 422,
+        "errors": [
+          {
+            "field": "expectedSha256",
+            "code": "stale",
+            "message": "The file changed on disk since it was loaded; reload the skill and try again."
+          }
+        ],
+        "content": true
+      },
+      "pass": true,
+      "evidence": {
+        "currentSha": "6045ffea9da8524ffde3a002074390deb4a0a24174a141dd0091286fa4d9f314"
+      }
+    },
+    {
+      "area": "persistence",
+      "id": "no-temp-files",
+      "expected": [],
+      "observed": [],
+      "pass": true,
+      "label": "after-update"
+    },
+    {
+      "area": "delete",
+      "id": "stale-rejected",
+      "expected": {
+        "status": 409,
+        "code": "stale",
+        "fileExists": true
+      },
+      "observed": {
+        "status": 409,
+        "error": {
+          "code": "stale",
+          "message": "The file changed on disk since it was loaded; reload the skill and try again.",
+          "details": {
+            "expected": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+            "actual": "6045ffea9da8524ffde3a002074390deb4a0a24174a141dd0091286fa4d9f314"
+          }
+        },
+        "fileExists": true
+      },
+      "pass": true
+    },
+    {
+      "area": "delete",
+      "id": "remove",
+      "expected": {
+        "status": 200,
+        "fileGone": true,
+        "registryVisible": false
+      },
+      "observed": {
+        "status": 200,
+        "removed": {
+          "rootId": "user-agents",
+          "relPath": "verify-api-skill/SKILL.md",
+          "name": "verify-api-skill"
+        },
+        "exists": false,
+        "registry": {
+          "checked": true,
+          "visible": false,
+          "provider": null,
+          "path": null,
+          "catalogCount": 50,
+          "waitedMs": 60
+        }
+      },
+      "pass": true,
+      "evidence": {
+        "checked": true,
+        "visible": false,
+        "provider": null,
+        "path": null,
+        "catalogCount": 50,
+        "waitedMs": 60
+      }
+    },
+    {
+      "area": "delete",
+      "id": "second-404",
+      "expected": {
+        "status": 404
+      },
+      "observed": {
+        "status": 404,
+        "error": {
+          "code": "not-found",
+          "message": "No scanned skill exists at this rootId and relPath."
+        }
+      },
+      "pass": true
+    },
+    {
+      "area": "persistence",
+      "id": "no-temp-files",
+      "expected": [],
+      "observed": [],
+      "pass": true,
+      "label": "after-delete"
+    },
+    {
+      "area": "library",
+      "id": "status-available-after-removal",
+      "expected": {
+        "bundle": "available",
+        "flat": "available"
+      },
+      "observed": {
+        "bundle": "available",
+        "flat": "available"
+      },
+      "pass": true
+    },
+    {
+      "area": "library",
+      "id": "install-bundle",
+      "expected": {
+        "status": 200,
+        "fileRestored": true,
+        "registryVisible": true
+      },
+      "observed": {
+        "status": 200,
+        "skill": "ds-unslop",
+        "registry": {
+          "checked": true,
+          "visible": true,
+          "provider": "verify-managed",
+          "path": "/private/tmp/dsm-verify-home/agents/skills/ds-unslop/SKILL.md",
+          "catalogCount": 49,
+          "waitedMs": 57
+        },
+        "exists": true
+      },
+      "pass": true
+    },
+    {
+      "area": "library",
+      "id": "status-installed-after-install",
+      "expected": {
+        "status": "installed"
+      },
+      "observed": {
+        "status": "installed"
+      },
+      "pass": true
+    },
+    {
+      "area": "library",
+      "id": "install-flat-alias",
+      "expected": {
+        "status": 200,
+        "fileRestored": true
+      },
+      "observed": {
+        "status": 200,
+        "exists": true
+      },
+      "pass": true
+    },
+    {
+      "area": "library",
+      "id": "already-installed",
+      "expected": {
+        "status": 409,
+        "code": "already-installed"
+      },
+      "observed": {
+        "status": 409,
+        "error": {
+          "code": "already-installed",
+          "message": "This library skill is already installed."
+        }
+      },
+      "pass": true
+    },
+    {
+      "area": "library",
+      "id": "status-update-after-tamper",
+      "expected": {
+        "status": "update"
+      },
+      "observed": {
+        "status": "update"
+      },
+      "pass": true
+    },
+    {
+      "area": "library",
+      "id": "update-requires-overwrite",
+      "expected": [
+        400,
+        409,
+        422
+      ],
+      "observed": {
+        "status": 409,
+        "error": {
+          "code": "overwrite-required",
+          "message": "Replacing an installed skill requires overwrite: true and its expected sha256."
+        }
+      },
+      "pass": true
+    },
+    {
+      "area": "library",
+      "id": "update-with-overwrite",
+      "expected": {
+        "status": 200,
+        "restored": true,
+        "registryVisible": true
+      },
+      "observed": {
+        "status": 200,
+        "registry": {
+          "checked": true,
+          "visible": true,
+          "provider": "verify-managed",
+          "path": "/private/tmp/dsm-verify-home/agents/skills/ds-unslop/SKILL.md",
+          "catalogCount": 50,
+          "waitedMs": 0
+        },
+        "tamperedMarkerGone": true
+      },
+      "pass": true
+    },
+    {
+      "area": "library",
+      "id": "status-installed-after-update",
+      "expected": {
+        "status": "installed"
+      },
+      "observed": {
+        "status": "installed"
+      },
+      "pass": true
+    },
+    {
+      "area": "persistence",
+      "id": "no-temp-files",
+      "expected": [],
+      "observed": [],
+      "pass": true,
+      "label": "after-library-mutations"
+    },
+    {
+      "area": "safety",
+      "id": "install-traversal",
+      "expected": [
+        400,
+        404,
+        422
+      ],
+      "observed": {
+        "status": 400,
+        "error": {
+          "code": "invalid-path",
+          "message": "Library relPath must be a relative path inside the library."
+        }
+      },
+      "pass": true
+    },
+    {
+      "area": "safety",
+      "id": "install-absolute",
+      "expected": [
+        400,
+        404,
+        422
+      ],
+      "observed": {
+        "status": 400,
+        "error": {
+          "code": "invalid-path",
+          "message": "Library relPath must be a relative path inside the library."
+        }
+      },
+      "pass": true
+    },
+    {
+      "area": "safety",
+      "id": "unknown-library",
+      "expected": [
+        400,
+        404
+      ],
+      "observed": {
+        "status": 404,
+        "error": {
+          "code": "library-not-found",
+          "message": "Unknown library \"nope\"."
+        }
+      },
+      "pass": true
+    },
+    {
+      "area": "safety",
+      "id": "unknown-root",
+      "expected": [
+        400,
+        404,
+        422
+      ],
+      "observed": {
+        "status": 422,
+        "error": {
+          "code": "validation-failed",
+          "message": "1 validation error."
+        }
+      },
+      "pass": true
+    },
+    {
+      "area": "safety",
+      "id": "delete-traversal",
+      "expected": [
+        400,
+        404,
+        422
+      ],
+      "observed": {
+        "status": 404,
+        "error": {
+          "code": "not-found",
+          "message": "No scanned skill exists at this rootId and relPath."
+        }
+      },
+      "pass": true
+    },
+    {
+      "area": "safety",
+      "id": "nul-rejected",
+      "expected": {
+        "status": 200,
+        "ok": false
+      },
+      "observed": {
+        "status": 200,
+        "ok": false,
+        "errors": [
+          {
+            "field": "name",
+            "code": "invalid",
+            "message": "Name must be kebab-case: lowercase letters, digits, and single hyphens."
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "area": "safety",
+      "id": "bad-json",
+      "expected": [
+        400,
+        422
+      ],
+      "observed": {
+        "status": 400,
+        "error": {
+          "code": "bad-request",
+          "message": "Request body must be valid JSON."
+        }
+      },
+      "pass": true
+    },
+    {
+      "area": "safety",
+      "id": "method-not-allowed",
+      "expected": 405,
+      "observed": {
+        "status": 405,
+        "error": {
+          "code": "method-not-allowed",
+          "message": "POST is not allowed for /skills-manager/api/state."
+        }
+      },
+      "pass": true
+    },
+    {
+      "area": "safety",
+      "id": "unknown-endpoint",
+      "expected": 404,
+      "observed": {
+        "status": 404
+      },
+      "pass": true
+    },
+    {
+      "area": "safety",
+      "id": "oversized-body",
+      "expected": 413,
+      "observed": {
+        "status": 413,
+        "error": "body-too-large"
+      },
+      "pass": true
+    },
+    {
+      "area": "safety",
+      "id": "symlink-escape-delete",
+      "expected": {
+        "rejected": true,
+        "targetIntact": true
+      },
+      "observed": {
+        "status": 400,
+        "error": {
+          "code": "symlink-target",
+          "message": "Refusing to operate through a symbolic link: /private/tmp/dsm-verify-home/agents/skills/escape-link"
+        },
+        "targetIntact": true
+      },
+      "pass": true,
+      "evidence": {
+        "response": {
+          "ok": false,
+          "error": {
+            "code": "symlink-target",
+            "message": "Refusing to operate through a symbolic link: /private/tmp/dsm-verify-home/agents/skills/escape-link"
+          }
+        }
+      }
+    },
+    {
+      "area": "safety",
+      "id": "symlink-escape-update",
+      "expected": {
+        "rejected": true,
+        "targetIntact": true
+      },
+      "observed": {
+        "status": 400,
+        "error": {
+          "code": "symlink-target",
+          "message": "Refusing to write through a symbolic link: /private/tmp/dsm-verify-home/agents/skills/escape-link"
+        },
+        "targetIntact": true
+      },
+      "pass": true
+    },
+    {
+      "area": "conflicts",
+      "id": "alias-collision-validate",
+      "expected": {
+        "status": 200,
+        "ok": false,
+        "conflict": "alias-collision"
+      },
+      "observed": {
+        "status": 200,
+        "ok": false,
+        "conflicts": [
+          "duplicate-name",
+          "alias-collision"
+        ]
+      },
+      "pass": true,
+      "evidence": [
+        {
+          "code": "duplicate-name",
+          "severity": "error",
+          "name": "verify-alias-dup",
+          "message": "The name \"verify-alias-dup\" is used 3 times in User (.agents); only one can be served.",
+          "entries": [
+            {
+              "rootId": "user-agents",
+              "rootLabel": "User (.agents)",
+              "relPath": "verify-alias-dup/SKILL.md",
+              "path": "/private/tmp/dsm-verify-home/agents/skills/verify-alias-dup/SKILL.md",
+              "rank": 500
+            },
+            {
+              "rootId": "user-agents",
+              "rootLabel": "User (.agents)",
+              "relPath": "verify-alias-dup.md",
+              "path": "/private/tmp/dsm-verify-home/agents/skills/verify-alias-dup.md",
+              "rank": 500
+            },
+            {
+              "rootId": "user-agents",
+              "rootLabel": "User (.agents)",
+              "relPath": "verify-alias-dup/SKILL.md",
+              "path": "/private/tmp/dsm-verify-home/agents/skills/verify-alias-dup/SKILL.md",
+              "rank": 500
+            }
+          ]
+        },
+        {
+          "code": "alias-collision",
+          "severity": "error",
+          "name": "verify-alias-dup",
+          "message": "A flat file \"verify-alias-dup.md\" in User (.agents) already claims this skill name; remove it or choose another name.",
+          "entries": [
+            {
+              "rootId": "user-agents",
+              "rootLabel": "User (.agents)",
+              "relPath": "verify-alias-dup/SKILL.md",
+              "path": "/private/tmp/dsm-verify-home/agents/skills/verify-alias-dup/SKILL.md",
+              "rank": 500
+            },
+            {
+              "rootId": "user-agents",
+              "rootLabel": "User (.agents)",
+              "relPath": "verify-alias-dup.md",
+              "path": "/private/tmp/dsm-verify-home/agents/skills/verify-alias-dup.md",
+              "rank": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "conflicts",
+      "id": "alias-collision-blocks-save",
+      "expected": {
+        "status": [
+          409,
+          422
+        ],
+        "bundleUnchanged": true
+      },
+      "observed": {
+        "status": 422,
+        "bundleUnchanged": true
+      },
+      "pass": true
+    },
+    {
+      "area": "persistence",
+      "id": "no-temp-files",
+      "expected": [],
+      "observed": [],
+      "pass": true,
+      "label": "final"
+    },
+    {
+      "area": "safety",
+      "id": "readonly-roots-unchanged",
+      "expected": {
+        "unchanged": true
+      },
+      "observed": {
+        "readonlyChanged": false,
+        "pluginChanged": false
+      },
+      "pass": true
+    },
+    {
+      "area": "safety",
+      "id": "real-agents-untouched",
+      "expected": {
+        "unchanged": true
+      },
+      "observed": {
+        "before": 1793446272678.6697,
+        "after": 1793446272678.6697
+      },
+      "pass": true
+    }
+  ]
+}

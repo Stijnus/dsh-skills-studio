@@ -1,0 +1,46 @@
+{
+  "source": "live session catalog of DSH 0.2.1-rc.5 desktop profile, session 2e053472-8964-49a7-a560-44da4bc98fa9",
+  "catalogEntries": 71,
+  "userRootEntries": 49,
+  "auditModelInvocable": 43,
+  "missingFromCatalog": [],
+  "userOnlyAliasesInCatalog": [],
+  "descriptionLengthDiff": [],
+  "truncated": [
+    {
+      "name": "computer-use",
+      "raw": 548,
+      "rendered": 500
+    },
+    {
+      "name": "orca-cli",
+      "raw": 782,
+      "rendered": 500
+    },
+    {
+      "name": "orchestration",
+      "raw": 813,
+      "rendered": 500
+    },
+    {
+      "name": "playwright-best-practices",
+      "raw": 984,
+      "rendered": 500
+    },
+    {
+      "name": "supabase",
+      "raw": 788,
+      "rendered": 500
+    },
+    {
+      "name": "supabase-postgres-best-practices",
+      "raw": 834,
+      "rendered": 500
+    },
+    {
+      "name": "vibe-to-ui",
+      "raw": 611,
+      "rendered": 500
+    }
+  ]
+}

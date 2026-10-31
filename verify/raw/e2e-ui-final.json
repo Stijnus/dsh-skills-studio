@@ -1,0 +1,687 @@
+{
+  "tool": "e2e-ui.cjs",
+  "startedAt": "2026-10-31T12:16:50.203Z",
+  "generatedAt": "2026-10-31T12:17:23.752Z",
+  "url": "http://127.0.0.1:59699/?token=REDACTED",
+  "writable": "/private/tmp/dsm-verify-home/agents/skills",
+  "browser": "playwright-core + system Chrome channel (headless, --no-sandbox)",
+  "note": "playwright-cli daemon cannot launch a browser in this sandbox; playwright-core used with the same package.",
+  "uniqueSkill": "e2e-ui-mvwd8gt7",
+  "summary": {
+    "total": 28,
+    "passed": 28,
+    "failed": 0
+  },
+  "results": [
+    {
+      "id": "section-registered",
+      "expected": {
+        "navEntry": true,
+        "sectionVisible": true,
+        "eyebrow": "agent skills"
+      },
+      "observed": {
+        "navEntry": true,
+        "sectionVisible": true,
+        "eyebrow": "agent skills"
+      },
+      "pass": true
+    },
+    {
+      "id": "stats-strip",
+      "expected": {
+        "installed": "50",
+        "available": "36",
+        "conflicts": "0"
+      },
+      "observed": {
+        "values": [
+          "50",
+          "36",
+          "0"
+        ],
+        "labels": [
+          "INSTALLED",
+          "AVAILABLE",
+          "CONFLICTS"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "installed-rows",
+      "expected": {
+        "total": 50,
+        "ds": 35
+      },
+      "observed": {
+        "total": 50,
+        "ds": 35,
+        "groupCounts": [
+          "1 skill",
+          "49 skills"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "writable-actions",
+      "expected": {
+        "edit": 49,
+        "delete": 49,
+        "readOnlyTags": 1
+      },
+      "observed": {
+        "editButtons": 49,
+        "deleteButtons": 49,
+        "readOnlyTags": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "root-group",
+      "expected": {
+        "group": "USER (.AGENTS)",
+        "count": "49 skills",
+        "readonlyGroup": "1 skill"
+      },
+      "observed": {
+        "hasGroup": true,
+        "hasCount": true,
+        "hasReadonlyGroup": true
+      },
+      "pass": true
+    },
+    {
+      "id": "screenshot-installed",
+      "expected": true,
+      "observed": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-installed-light.png",
+      "pass": true,
+      "evidence": {
+        "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-installed-light.png"
+      }
+    },
+    {
+      "id": "available-libraries",
+      "expected": {
+        "cards": 2,
+        "dsRows": 29,
+        "aliasRows": 6,
+        "installedRows": 29
+      },
+      "observed": {
+        "cardCount": 2,
+        "dsRows": 29,
+        "aliasRows": 6,
+        "installedRows": 29
+      },
+      "pass": true
+    },
+    {
+      "id": "from-plugins",
+      "expected": {
+        "heading": "From plugins",
+        "pluginSkillRow": true
+      },
+      "observed": {
+        "count": 1,
+        "text": "From plugins\n\nSkills served by installed plugins — read-only here.\n\n1 skill\nP\nplugin-only\n\nDeployment-provider fixture skill used to prove the From plugins catalog group.\n\nvia verify-managed\nRead-only",
+        "pluginRowVisible": true
+      },
+      "pass": true
+    },
+    {
+      "id": "screenshot-available",
+      "expected": true,
+      "observed": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-available-light.png",
+      "pass": true,
+      "evidence": {
+        "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-available-light.png"
+      }
+    },
+    {
+      "id": "library-available-after-removal",
+      "expected": {
+        "installedRows": 49,
+        "installedStat": "49"
+      },
+      "observed": {
+        "installedRowsAfterRemoval": 49,
+        "statsAfterRemoval": [
+          "49",
+          "36",
+          "0"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "install-library-skill",
+      "expected": {
+        "httpStatus": 200,
+        "fileRestored": true
+      },
+      "observed": {
+        "httpStatus": 200,
+        "after": {
+          "exists": true
+        }
+      },
+      "pass": true,
+      "evidence": {
+        "response": "{\"ok\":true,\"skill\":{\"id\":\"user-agents:ds-unslop/SKILL.md\",\"name\":\"ds-unslop\",\"description\":\"Strip AI writing tells from prose and code comments, then rewrite in plain, specific English. Use when drafting replies, docs, READMEs, PR bodies, commits or comments.\",\"modelInvocable\":true,\"userInvocable\":true,\"kind\":\"bundle\",\"rootId\":\"user-agents\",\"rootLabel\":\"User (.agents)\",\"scope\":\"user\",\"rank\":500,\"p"
+      }
+    },
+    {
+      "id": "install-updates-status",
+      "expected": {
+        "rowNoLongerInstallable": true
+      },
+      "observed": {
+        "installButtonCount": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "add-editor-focus",
+      "expected": {
+        "focusedField": "dsm-f-name",
+        "valid": true,
+        "screenshot": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-add-form-light.png"
+      },
+      "observed": {
+        "focused": "dsm-f-name",
+        "looksGood": true
+      },
+      "pass": true,
+      "evidence": {
+        "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-add-form-light.png"
+      }
+    },
+    {
+      "id": "add-through-form",
+      "expected": {
+        "httpStatus": 200,
+        "rowVisible": true,
+        "diskFile": true,
+        "live": "Saved · agents can see it now"
+      },
+      "observed": {
+        "httpStatus": 200,
+        "live": "Saved · agents can see it now.",
+        "onDisk": true,
+        "rowCount": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "add-success-message",
+      "expected": {
+        "contains": "agents can see it now"
+      },
+      "observed": {
+        "live": "Saved · agents can see it now."
+      },
+      "pass": true
+    },
+    {
+      "id": "add-updates-count",
+      "expected": {
+        "installed": "51"
+      },
+      "observed": {
+        "stats": [
+          "51",
+          "36",
+          "0"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "screenshot-added",
+      "expected": true,
+      "observed": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-added-light.png",
+      "pass": true,
+      "evidence": {
+        "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-added-light.png"
+      }
+    },
+    {
+      "id": "edit-through-form",
+      "expected": {
+        "nameDisabled": true,
+        "httpStatus": 200,
+        "descriptionUpdated": true
+      },
+      "observed": {
+        "nameDisabled": true,
+        "httpStatus": 200,
+        "rowText": "E\ne2e-ui-mvwd8gt7\n\nSkill edited by the independent UI E2E harness.\n\nbundle\nmodel\nuser\nrank 500\nUser (.agents)\nEdit\nDelet"
+      },
+      "pass": true
+    },
+    {
+      "id": "duplicate-blocked-before-save",
+      "expected": {
+        "blockingConflictsShown": true,
+        "saveDisabled": true,
+        "saveRequests": 0
+      },
+      "observed": {
+        "blockingText": "Blocking conflicts\n\nDuplicate name: Same name in readonly-skills rank 300 and User (.agents) rank 500; rank 300 wins and shadows the other. (In readonly-skills, User (.agents))",
+        "saveDisabled": true,
+        "saveRequestsBefore": 2,
+        "saveRequestsAfter": 2,
+        "saveRequestsFinal": 2,
+        "screenshot": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-duplicate-blocked-light.png"
+      },
+      "pass": true,
+      "evidence": {
+        "blockingText": "Blocking conflicts\n\nDuplicate name: Same name in readonly-skills rank 300 and User (.agents) rank 500; rank 300 wins and shadows the other. (In readonly-skills, User (.agents))",
+        "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-duplicate-blocked-light.png"
+      }
+    },
+    {
+      "id": "escape-cancels-editor",
+      "expected": {
+        "editorClosed": true
+      },
+      "observed": {
+        "stillEditing": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "delete-through-form",
+      "expected": {
+        "confirmText": "Delete \"e2e-ui-mvwd8gt7\"? This removes the file(s).",
+        "httpStatus": 200,
+        "rowGone": true,
+        "diskGone": true,
+        "screenshot": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-delete-confirm-light.png"
+      },
+      "observed": {
+        "confirmText": "Delete \"e2e-ui-mvwd8gt7\"? This removes the file(s).",
+        "httpStatus": 200,
+        "gone": true,
+        "diskGone": true
+      },
+      "pass": true,
+      "evidence": {
+        "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-delete-confirm-light.png"
+      }
+    },
+    {
+      "id": "delete-keeps-tabpanel",
+      "expected": {
+        "installedSelected": "true",
+        "rowsRemain": true,
+        "tabsStillWork": true
+      },
+      "observed": {
+        "selectedAfterDelete": "true",
+        "rowsAfterDelete": 50,
+        "availableVisible": true
+      },
+      "pass": true
+    },
+    {
+      "id": "a11y-labelled-inputs",
+      "expected": {
+        "allPresent": true,
+        "allLabelled": true
+      },
+      "observed": [
+        {
+          "id": "dsm-f-name",
+          "present": true,
+          "label": "Name"
+        },
+        {
+          "id": "dsm-f-description",
+          "present": true,
+          "label": "Description"
+        },
+        {
+          "id": "dsm-f-body",
+          "present": true,
+          "label": "Instructions (Markdown)"
+        },
+        {
+          "id": "dsm-f-whenToUse",
+          "present": true,
+          "label": "When to use (optional)"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "a11y-announcements",
+      "expected": {
+        "liveRegion": ">=1",
+        "tablist": 1,
+        "editorAlertRole": true
+      },
+      "observed": {
+        "live": 1,
+        "liveAria": [
+          {
+            "role": "status",
+            "ariaLive": "polite",
+            "text": "Refreshed."
+          }
+        ],
+        "tablist": 1,
+        "editorAlertRole": true
+      },
+      "pass": true
+    },
+    {
+      "id": "a11y-keyboard-tabs",
+      "expected": {
+        "availableSelected": "true"
+      },
+      "observed": {
+        "availableSelected": "true"
+      },
+      "pass": true
+    },
+    {
+      "id": "theme-dark",
+      "expected": true,
+      "observed": {
+        "darkInstalled": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-installed-dark.png",
+        "darkAvailable": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-available-dark.png"
+      },
+      "pass": true
+    },
+    {
+      "id": "no-console-errors",
+      "expected": {
+        "consoleErrors": 0,
+        "pageErrors": 0
+      },
+      "observed": {
+        "consoleErrors": [],
+        "pageErrors": []
+      },
+      "pass": true,
+      "evidence": {
+        "consoleErrors": [],
+        "pageErrors": []
+      }
+    },
+    {
+      "id": "api-no-errors",
+      "expected": {
+        "all2xxOr4xxExpected": true
+      },
+      "observed": {
+        "apiLog": [
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/install?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/validate?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/save?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/skill?rootId=user-agents&relPath=e2e-ui-mvwd8gt7%2FSKILL.md&cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/validate?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/save?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/validate?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/delete?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          }
+        ]
+      },
+      "pass": true,
+      "evidence": {
+        "apiLog": [
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/install?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/validate?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/save?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/skill?rootId=user-agents&relPath=e2e-ui-mvwd8gt7%2FSKILL.md&cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/validate?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/save?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/validate?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "POST",
+            "url": "/skills-manager/api/delete?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          },
+          {
+            "method": "GET",
+            "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+            "status": 200
+          }
+        ]
+      }
+    }
+  ],
+  "artifacts": {
+    "screenshots": [
+      "ui-add-form-light.png",
+      "ui-added-light.png",
+      "ui-available-dark.png",
+      "ui-available-light.png",
+      "ui-delete-confirm-light.png",
+      "ui-duplicate-blocked-light.png",
+      "ui-installed-dark.png",
+      "ui-installed-light.png"
+    ]
+  },
+  "apiLog": [
+    {
+      "method": "GET",
+      "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/skills-manager/api/install?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/skills-manager/api/validate?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/skills-manager/api/save?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/skills-manager/api/skill?rootId=user-agents&relPath=e2e-ui-mvwd8gt7%2FSKILL.md&cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/skills-manager/api/validate?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/skills-manager/api/save?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/skills-manager/api/validate?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/skills-manager/api/delete?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/skills-manager/api/state?cwd=%2FUsers%2Fstijnus%2FDocuments%2Fdeepseek-harness%2Fdefault-workspace",
+      "status": 200
+    }
+  ],
+  "consoleErrors": [],
+  "pageErrors": []
+}

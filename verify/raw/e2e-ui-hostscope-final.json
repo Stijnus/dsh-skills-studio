@@ -1,0 +1,91 @@
+{
+  "tool": "e2e-ui-hostscope.cjs",
+  "generatedAt": "2026-10-31T12:18:13.795Z",
+  "url": "http://127.0.0.1:59768/?token=REDACTED",
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0
+  },
+  "results": [
+    {
+      "id": "api-state-hostscope",
+      "expected": {
+        "coversLocalRoots": false,
+        "catalogEntries": 1
+      },
+      "observed": {
+        "coversLocalRoots": false,
+        "catalogEntries": 1,
+        "entryPaths": [
+          "/private/tmp/dsm-verify-home/plugin-skills/plugin-only/SKILL.md"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "catalog-rows-rendered",
+      "expected": {
+        "catalogRows": 1,
+        "pluginSkill": "plugin-only"
+      },
+      "observed": {
+        "catalogRows": 1,
+        "rowNames": [
+          "plugin-only"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "host-scope-note",
+      "expected": {
+        "note": "The host-scope registry cannot verify a session catalog; local skill changes reach agents on their next step through the filesystem provider."
+      },
+      "observed": {
+        "found": true
+      },
+      "pass": true,
+      "evidence": {
+        "groupText": "From plugins\n\nSkills served by installed plugins — read-only here.\n\n1 skill\nP\nplugin-only\n\nDeployment-provider fixture skill used to prove the From plugins catalog group.\n\nvia verify-managed\nRead-only\n\nThe host-scope registry cannot verify a session catalog; local skill changes reach agents on their next step through the filesystem provider."
+      }
+    },
+    {
+      "id": "available-stat-includes-plugins",
+      "expected": {
+        "available": "36"
+      },
+      "observed": {
+        "statValues": [
+          "51",
+          "36",
+          "2"
+        ],
+        "expected": 36
+      },
+      "pass": true
+    },
+    {
+      "id": "screenshot",
+      "expected": true,
+      "observed": {
+        "path": "dsh-skills-manager/verify/screenshots/ui-available-hostscope-light.png"
+      },
+      "pass": true
+    },
+    {
+      "id": "no-console-errors",
+      "expected": {
+        "errors": 0
+      },
+      "observed": {
+        "consoleErrors": []
+      },
+      "pass": true,
+      "evidence": {
+        "consoleErrors": []
+      }
+    }
+  ],
+  "consoleErrors": []
+}

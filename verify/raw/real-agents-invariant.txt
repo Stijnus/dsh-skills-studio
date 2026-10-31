@@ -1,0 +1,10 @@
+== real ~/.agents/skills invariant at 2026-10-31T12:18:49Z
+entries: 49
+ds bundles: 29
+ds flat aliases: 6 [ds-audit.md ds-best.md ds-context.md ds-plan.md ds-review.md ds-verify.md ]
+community bundles: 14
+manifest sha256: 29e07eafddc1f02216914bfafb274ee9a91199d954fc52f6bde9d198136a4059
+lock sha256: a3656ec071aca61ae88ead3ed8ad098ffdc41bafc516eab03569a43a3f713b44
+skills dir mtime: 1793446272
+
+entries 49 valid 49 invalid 0 duplicates 0 aliasCollisions 0 nameMismatches 0 findings {"high":0,"medium":8,"low":1,"info":2} drift [{"label":"bundle-sources","checked":29,"match":29,"mismatch":0},{"label":"alias-sources","checked":6,"match":6,"mismatch":0}]

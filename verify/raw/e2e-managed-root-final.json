@@ -1,0 +1,223 @@
+{
+  "tool": "e2e-managed-root.mjs",
+  "generatedAt": "2026-10-31T12:17:52.490Z",
+  "base": "http://127.0.0.1:59768",
+  "writable": "/private/tmp/dsm-verify-home/managed-skills",
+  "readonly": "/private/tmp/dsm-verify-home/readonly-skills",
+  "summary": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0
+  },
+  "results": [
+    {
+      "id": "roots",
+      "expected": {
+        "managedWritable": true,
+        "userAgentsReadOnly": true,
+        "customReadOnly": true
+      },
+      "observed": {
+        "managed": {
+          "id": "managed",
+          "label": "My skills",
+          "path": "/private/tmp/dsm-verify-home/managed-skills",
+          "scope": "managed",
+          "rank": 450,
+          "writable": true,
+          "exists": true
+        },
+        "userAgents": {
+          "id": "user-agents",
+          "label": "User (.agents)",
+          "path": "/private/tmp/dsm-verify-home/agents/skills",
+          "scope": "user",
+          "rank": 500,
+          "writable": false,
+          "exists": true
+        },
+        "custom": {
+          "id": "custom-1",
+          "label": "readonly-skills",
+          "path": "/private/tmp/dsm-verify-home/readonly-skills",
+          "scope": "custom",
+          "rank": 300,
+          "writable": false,
+          "exists": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "id": "catalog-covers-local-false",
+      "expected": {
+        "coversLocalRoots": false,
+        "entries": 1
+      },
+      "observed": {
+        "coversLocalRoots": false,
+        "entries": 1,
+        "names": [
+          "plugin-only"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "library-readonly-installed",
+      "expected": {
+        "installed": 28,
+        "conflict": 1,
+        "aliasesInstalled": 6
+      },
+      "observed": {
+        "counts": {
+          "installed": 28,
+          "conflict": 1
+        },
+        "aliasCounts": {
+          "installed": 6
+        },
+        "dsTdd": "conflict"
+      },
+      "pass": true,
+      "evidence": {
+        "evidence": {
+          "dsTdd": {
+            "name": "ds-tdd",
+            "description": "Fix a bug test-first: write the smallest test that fails for the right reason, then the smallest change that passes it. Use for TDD, regression tests, or a cheap local repro.",
+            "kind": "bundle",
+            "relPath": "ds-tdd/SKILL.md",
+            "sha256": "9f9b28f099c2610f9891ef08d46265b9e9b702e8f9c15d6ca8feae25b55a83fa",
+            "conflict": {
+              "code": "duplicate-name",
+              "severity": "error",
+              "name": "ds-tdd",
+              "message": "Same name is already provided by readonly-skills rank 300; an installed copy would be shadowed.",
+              "entries": [
+                {
+                  "rootId": "custom-1",
+                  "rootLabel": "readonly-skills",
+                  "relPath": "ds-tdd/SKILL.md",
+                  "path": "/private/tmp/dsm-verify-home/readonly-skills/ds-tdd/SKILL.md",
+                  "rank": 300
+                }
+              ]
+            },
+            "status": "conflict"
+          }
+        },
+        "note": "differing ds-tdd copy in the read-only root must be conflict, identical copies installed"
+      }
+    },
+    {
+      "id": "duplicate-refused",
+      "expected": {
+        "ok": false,
+        "conflict": "duplicate-name",
+        "fileWritten": false
+      },
+      "observed": {
+        "status": 200,
+        "ok": false,
+        "conflicts": [
+          "duplicate-name"
+        ],
+        "exists": false
+      },
+      "pass": true
+    },
+    {
+      "id": "save-and-probe-3state",
+      "expected": {
+        "status": 200,
+        "fileOnDisk": true,
+        "checked": false,
+        "visible": false,
+        "reason": "session-scoped"
+      },
+      "observed": {
+        "status": 200,
+        "registry": {
+          "checked": false,
+          "visible": false,
+          "provider": null,
+          "path": null,
+          "catalogCount": 1,
+          "waitedMs": 0,
+          "reason": "The host-scope registry view does not include the session-scoped skill providers that serve these roots; the filesystem provider watches the written root and will surface the change to agents on the next step."
+        },
+        "fileOnDisk": true
+      },
+      "pass": true,
+      "evidence": {
+        "evidence": {
+          "registry": {
+            "checked": false,
+            "visible": false,
+            "provider": null,
+            "path": null,
+            "catalogCount": 1,
+            "waitedMs": 0,
+            "reason": "The host-scope registry view does not include the session-scoped skill providers that serve these roots; the filesystem provider watches the written root and will surface the change to agents on the next step."
+          }
+        }
+      }
+    },
+    {
+      "id": "state-lists-managed-skill",
+      "expected": {
+        "listed": true
+      },
+      "observed": {
+        "listed": true
+      },
+      "pass": true
+    },
+    {
+      "id": "delete",
+      "expected": {
+        "status": 200,
+        "fileGone": true,
+        "checked": false
+      },
+      "observed": {
+        "status": 200,
+        "registry": {
+          "checked": false,
+          "visible": false,
+          "provider": null,
+          "path": null,
+          "catalogCount": 1,
+          "waitedMs": 0,
+          "reason": "The host-scope registry view does not include the session-scoped skill providers that serve these roots; the filesystem provider watches the written root and will surface the change to agents on the next step."
+        },
+        "fileGone": true
+      },
+      "pass": true,
+      "evidence": {
+        "evidence": {
+          "registry": {
+            "checked": false,
+            "visible": false,
+            "provider": null,
+            "path": null,
+            "catalogCount": 1,
+            "waitedMs": 0,
+            "reason": "The host-scope registry view does not include the session-scoped skill providers that serve these roots; the filesystem provider watches the written root and will surface the change to agents on the next step."
+          }
+        }
+      }
+    },
+    {
+      "id": "readonly-unchanged",
+      "expected": {
+        "unchanged": true
+      },
+      "observed": {
+        "changed": false
+      },
+      "pass": true
+    }
+  ]
+}

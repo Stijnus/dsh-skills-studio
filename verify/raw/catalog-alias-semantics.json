@@ -1,0 +1,23 @@
+{
+  "catalogEntries": 71,
+  "userRootEntries": 49,
+  "userModelInvocableServed": 43,
+  "userNamesMissingFromCatalog": [
+    "ds-audit",
+    "ds-best",
+    "ds-context",
+    "ds-plan",
+    "ds-review",
+    "ds-verify"
+  ],
+  "gestureAliases": [
+    "ds-audit",
+    "ds-best",
+    "ds-context",
+    "ds-plan",
+    "ds-review",
+    "ds-verify"
+  ],
+  "aliasesInModelCatalog": [],
+  "aliasCount": 6
+}

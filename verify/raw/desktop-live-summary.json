@@ -1,0 +1,58 @@
+{
+  "source": "GET http://127.0.0.1:50910/skills-manager/api/state?cwd=<workspace> (read-only; user desktop app, never restarted; captured after the Lead HMR-reloaded the late fix)",
+  "generatedAt": "2026-10-31T12:17:37.637Z",
+  "roots": [
+    {
+      "id": "user-dsh",
+      "rank": 400,
+      "writable": false,
+      "exists": true,
+      "path": "/Users/stijnus/.dsh/skills"
+    },
+    {
+      "id": "user-agents",
+      "rank": 500,
+      "writable": true,
+      "exists": true,
+      "path": "/Users/stijnus/.agents/skills"
+    }
+  ],
+  "skills": {
+    "total": 49,
+    "dsEntries": 35,
+    "valid": 49
+  },
+  "libraries": [
+    {
+      "id": "deepseek-stack",
+      "skills": 29,
+      "statuses": {
+        "installed": 29
+      }
+    },
+    {
+      "id": "deepseek-stack-aliases",
+      "skills": 6,
+      "statuses": {
+        "installed": 6
+      }
+    }
+  ],
+  "catalog": {
+    "available": true,
+    "entries": 30,
+    "coversLocalRoots": false,
+    "providers": [
+      "rev-eng-skills",
+      "dsh-office"
+    ]
+  },
+  "stats": {
+    "skills": 49,
+    "editable": 49,
+    "libraries": 2,
+    "catalog": 30,
+    "conflicts": 0
+  },
+  "conflicts": 0
+}

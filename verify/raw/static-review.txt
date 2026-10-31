@@ -1,0 +1,35 @@
+== plugin deliverables sha256 at 2026-10-31T12:18:43Z
+9affcec0794bdceafc939b9ed0659bc43823ff47a29ddbbf1e2f3a189c687e99  index.js
+aa185d3e78fa703278afa573dc09f3e828e7672dc780f85548cc7017e9bc6de5  client.js
+f5678c3df2e19122d16829e41a0ea21b0a41440c1d9a17a7880bf763e8d160d5  package.json
+2538ac0ca6146949e5c0886409b08e03f4f46d79258233101f7444208d1ae040  cordis.patch.yml
+5960f4dc8ad1a9e09d2e93d7dd24f936d36a9fbbb21f127e3d5d47ff40f7170f  src/api.js
+07fc048b9a6b657bc5238f9cc30fdb6f8da0b0b458c279ab008e5ab1cc309807  src/config.js
+d3011f180dc3dbcc7d6a2b6e2284b55da59bfd75e7643d13c95ac4107670e0bb  src/frontmatter.js
+6723df354f380cca50cc127b660d40ff6d5346558bbf84b8eea5fa391218a3b4  src/mutate.js
+db960149229285646a2f12161bff72028267b8a3cc94f9029d157468eb351046  src/roots.js
+5255d82aa4b9d05f15bfefaf338a937dd18c2e9598480b8f6e9c9742989eb8f5  src/scan.js
+ae869d83e1d3119edf5d4fe4452365c216f3d4dd76cefc6149823ba94fb8c473  src/validate.js
+6f59d01e025c084db79ce0a024970693a33c9962c1e58e97289e2816fade9ddc  locale/en.json
+6d53f5da1e3e81a028c49d234bc15a173c644e6ee9ee8752ca9e1ed569c1f24b  locale/zh.json
+60249f16a40a97e92228537d784bb4addf63d5db2f83405ebedea2353fe2e3ff  test/api.test.js
+8e970c91d1953bbbf31f55c9fc00512daed25a19b02b4984fa42cc3af28d58c0  test/config.test.js
+81dceaa333353ba3e577bb5bae9cecce5e483fd5fe85a00e8e2ddec657249a5c  test/entry.test.js
+46e8da1a8e8748f7fb444817d754c55cd840d3053312c2c30397ad55f89911e1  test/frontmatter.test.js
+1eed0de68c5aaf5c2c062fbe15ecc2e573df25b7020b016c3eb0501a7a8b7c3b  test/helpers.js
+5caf72b12ce5b38c1e556f3e7618f2fac5612f1e05f308a702b1fa5783ff8cc4  test/mutate.test.js
+3010e73637ecebd3e3e7e572026e415e5d2b40391195521eb8100b976abcd266  test/roots.test.js
+88a06a2d0eb90b4d7cd739a22d6c7808c3e9758402a68fe0425390752846fb8f  test/scan.test.js
+c16bdd7793f9c087dcf75a5e0fc8b6aaa0c3418ea5a95b896d6e3321c8fe473b  test/validate.test.js
+
+== forbidden APIs in host code
+src/frontmatter.js:94:    const match = KEY_RE.exec(line.slice(indent))
+src/frontmatter.js:207:  const match = /^[ \t]*/.exec(line)
+
+== client imports
+32:    var React = require('react')
+== client fetch call sites
+464:      return fetch(url, opts).then(readJsonResponse)
+
+== test isolation
+none found

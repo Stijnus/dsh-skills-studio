@@ -1,0 +1,3 @@
+# Local-only evidence that includes the user's own running app sessions,
+# account state and session titles. Kept out of git; the file stays on disk.
+verify/screenshots/desktop-live-skills.png

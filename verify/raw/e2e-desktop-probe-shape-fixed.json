@@ -1,0 +1,29 @@
+{
+  "scenario": "host-scope catalog overlaps scanned roots by name, but its only entry publishes a path outside the scanned roots (the exact desktop shape: reverse-engineer-anything from rev-eng provider, path outside ~/.agents)",
+  "scannedSkills": 49,
+  "catalogEntries": 1,
+  "catalogCoversLocalRoots": false,
+  "catalogEntryPaths": [
+    {
+      "name": "reverse-engineer-anything",
+      "provider": "verify-managed",
+      "path": "/private/tmp/dsm-verify-home/plugin-skills-d/reverse-engineer-anything/SKILL.md"
+    }
+  ],
+  "catalogOverlapNames": [
+    "reverse-engineer-anything"
+  ],
+  "saveStatus": 200,
+  "registry": {
+    "checked": false,
+    "visible": false,
+    "provider": null,
+    "path": null,
+    "catalogCount": 1,
+    "waitedMs": 0,
+    "reason": "The host-scope registry view does not include the session-scoped skill providers that serve these roots; the filesystem provider watches the written root and will surface the change to agents on the next step."
+  },
+  "expectedAfterFix": "checked:false + reason mentioning session-scoped (neutral host-cannot-observe message)",
+  "registryMessageExpectation": "Saved · the host cannot observe the session catalog from here…",
+  "cleanupDeleteStatus": 200
+}

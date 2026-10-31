@@ -1,0 +1,20 @@
+== node --check index.js client.js src/*.js (final, 2026-10-31T12:18:42Z)
+index.js OK
+client.js OK
+src/api.js OK
+src/config.js OK
+src/frontmatter.js OK
+src/mutate.js OK
+src/roots.js OK
+src/scan.js OK
+src/validate.js OK
+
+== node --test
+ℹ tests 105
+ℹ suites 0
+ℹ pass 105
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 222.299875

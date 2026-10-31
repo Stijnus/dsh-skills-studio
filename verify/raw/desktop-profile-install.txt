@@ -1,0 +1,24 @@
+== package.json (relevant)
+bundles: ["@deepseek-ai/dsh-base","@deepseek-ai/dsh-web-app","@deepseek-ai/dsh-experimental-agent-team-profile","@deepseek-ai/dsh-experimental-inspector-profile","@deepseek-ai/dsh-experimental-auto-review","@deepseek-ai/dsh-experimental-voice-input-bundle","dsh-composer-predictions","dsh-cost-meter","@deepseek-ai/dsh-experimental-plugin-market-bundle","dsh-move-to-workspace","dsh-prompt-rewrite","dsh-workspace-status","dsh-rev-eng","dsh-moodboard"]
+dep dsh-skills-manager: undefined
+
+== cordis.patch.yml skills-manager row
+117:# dsh-skills-manager: Skills settings page (installed by Lead, restores from .bak if removed)
+118-- insert:
+119:    - id: skills-manager
+120:      name: 'dsh-skills-manager'
+121-      config:
+122-        libraries:
+123-          - id: deepseek-stack
+124-            label: deepseek-stack
+125-            path: /Users/stijnus/Documents/deepseek-harness/default-workspace/ds-stack/skills
+126-          - id: deepseek-stack-aliases
+127-            label: deepseek-stack (gesture aliases)
+128-            path: /Users/stijnus/Documents/deepseek-harness/default-workspace/ds-stack/aliases
+
+== node_modules link
+lrwxr-xr-x@ 1 stijnus  staff  78 Oct 31 13:02 node_modules/dsh-skills-manager -> /Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager
+
+== plugin files + mtimes
+-rw-------@ 1 stijnus  staff  135591 Oct 31 13:02 node_modules/dsh-skills-manager/client.js
+-rw-------@ 1 stijnus  staff    2524 Oct 31 12:48 node_modules/dsh-skills-manager/index.js

@@ -1,0 +1,66 @@
+{
+  "root": "/Users/stijnus/.agents/skills",
+  "counts": {
+    "entries": 49,
+    "ours": 35,
+    "theirs": 14
+  },
+  "nameCollisions": [],
+  "aliasCollisions": [],
+  "pairs": [
+    {
+      "score": 0.18518518518518517,
+      "a": "ds-design-audit",
+      "b": "web-design-guidelines",
+      "shared": [
+        "accessibility",
+        "audit",
+        "design",
+        "guidelines",
+        "web"
+      ]
+    },
+    {
+      "score": 0.1724137931034483,
+      "a": "ds-design-audit",
+      "b": "accessibility",
+      "shared": [
+        "accessibility",
+        "audit",
+        "guidelines",
+        "wcag",
+        "web"
+      ]
+    },
+    {
+      "score": 0.15789473684210525,
+      "a": "ds-audit",
+      "b": "web-design-guidelines",
+      "shared": [
+        "accessibility",
+        "audit",
+        "design"
+      ]
+    },
+    {
+      "score": 0.14285714285714285,
+      "a": "ds-audit",
+      "b": "accessibility",
+      "shared": [
+        "accessibility",
+        "audit",
+        "wcag"
+      ]
+    },
+    {
+      "score": 0.13636363636363635,
+      "a": "ds-review",
+      "b": "web-design-guidelines",
+      "shared": [
+        "audit",
+        "code",
+        "review"
+      ]
+    }
+  ]
+}
