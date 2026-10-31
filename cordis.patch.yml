@@ -2,4 +2,4 @@
 # `id` is the composition row; `name` is the package specifier.
 - insert:
     - id: skills-manager
-      name: '@stijnus/dsh-skills-manager'
+      name: 'dsh-skills-studio'
