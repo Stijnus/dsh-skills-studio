@@ -33,6 +33,28 @@ saves before they happen.
 No model calls, no network, no shell. File writes are restricted to the configured writable
 root, with path/symlink containment and 256 KiB skill / 1 MiB request caps.
 
+## Screenshots
+
+All captures come from an isolated scratch DSH 0.2.1-rc.5 instance with a copy of the 49-entry
+user skill root plus the deepseek-stack libraries; the app's theme is the only difference in
+the dark frame. Image files live in [`verify/screenshots/`](verify/screenshots/).
+
+| Light | Dark |
+|---|---|
+| ![Installed skills — light theme](verify/screenshots/ui-installed-light.png) | ![Installed skills — dark theme](verify/screenshots/ui-installed-dark.png) |
+
+| Available tab (libraries + "From plugins") | Add / edit editor with live validation |
+|---|---|
+| ![Available tab: skill libraries and plugin-provided skills](verify/screenshots/ui-available-light.png) | ![Add skill form with live validation](verify/screenshots/ui-add-form-light.png) |
+
+| Duplicate name blocked before saving | Host-scope catalog note (desktop topology) |
+|---|---|
+| ![Editor showing blocking duplicate-name conflict; Save disabled](verify/screenshots/ui-duplicate-blocked-light.png) | ![Available tab with plugin rows and the host-scope explanation note](verify/screenshots/ui-available-hostscope-light.png) |
+
+More verification images (saved state, delete confirmation, dark Available tab) are in the same
+directory; the raw evidence and harnesses are described in
+[`../SKILLS-VERIFICATION.md`](../SKILLS-VERIFICATION.md).
+
 ## Install
 
 ### Local development (web profile, isolated)
