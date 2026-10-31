@@ -102,16 +102,18 @@ description-similarity warnings, not name conflicts.
 
 ## 6. Reproduce
 ```bash
+# this repository checkout provides the audit scripts + evidence paths
+PLUGIN="$PWD"
 cd <workspace checkout used at the time>
 (cd .dsh-recon && node asar.mjs extract 'dsh/node_modules/yaml' /tmp/dsm-audit/yaml-pkg)  # entry is 1 byte short:
 printf '}' >> /tmp/dsm-audit/yaml-pkg/dsh/node_modules/yaml/package.json
-node verify/audit-roots.mjs --agents-home "$HOME/.agents" --dsh-home "$HOME/.dsh" \
+node "$PLUGIN/verify/audit-roots.mjs" --agents-home "$HOME/.agents" --dsh-home "$HOME/.dsh" \
   --project "$PWD" --deepseek-stack "$PWD/ds-stack" --pretty \
   --yaml-module /tmp/dsm-audit/yaml-pkg/dsh/node_modules/yaml/dist/index.js \
-  > verify/raw/audit-roots.json
+  > "$PLUGIN/verify/raw/audit-roots.json"
 node ds-stack/tools/validate.mjs ~/.agents/skills && node ds-stack/tools/conflicts.mjs --json
-python3 verify/extract-catalog.py "$HOME/.dsh/sessions/<session>/session.v4.jsonl.zstd" \
-  verify/raw/catalog-model-71.txt
+python3 "$PLUGIN/verify/extract-catalog.py" "$HOME/.dsh/sessions/<session>/session.v4.jsonl.zstd" \
+  "$PLUGIN/verify/raw/catalog-model-71.txt"
 ```
 Evidence: [`audit-roots.mjs`](verify/audit-roots.mjs) · [`extract-catalog.py`](verify/extract-catalog.py) ·
 [`raw/`](verify/raw/): `audit-roots.json`, `validate-{installed,source}.txt`, `conflicts-{installed,source}.json`,
