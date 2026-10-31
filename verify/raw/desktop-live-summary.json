@@ -7,14 +7,14 @@
       "rank": 400,
       "writable": false,
       "exists": true,
-      "path": "/Users/stijnus/.dsh/skills"
+      "path": "$HOME/.dsh/skills"
     },
     {
       "id": "user-agents",
       "rank": 500,
       "writable": true,
       "exists": true,
-      "path": "/Users/stijnus/.agents/skills"
+      "path": "$HOME/.agents/skills"
     }
   ],
   "skills": {

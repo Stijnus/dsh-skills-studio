@@ -1,5 +1,5 @@
 {
-  "root": "/Users/stijnus/.agents/skills",
+  "root": "$HOME/.agents/skills",
   "counts": {
     "entries": 49,
     "ours": 35,

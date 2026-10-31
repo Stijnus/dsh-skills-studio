@@ -1,5 +1,7 @@
 # dsh-skills-manager
 
+[![tests](https://github.com/Stijnus/dsh-skills-manager/actions/workflows/test.yml/badge.svg)](https://github.com/Stijnus/dsh-skills-manager/actions/workflows/test.yml)
+
 A **Skills** page for DeepSeek Harness Settings: see every installed agent skill, see what
 the registry actually serves to agents, add or edit skills on disk, and block conflicting
 saves before they happen.
@@ -53,16 +55,26 @@ the dark frame. Image files live in [`verify/screenshots/`](verify/screenshots/)
 
 More verification images (saved state, delete confirmation, dark Available tab) are in the same
 directory; the raw evidence and harnesses are described in
-[`../SKILLS-VERIFICATION.md`](../SKILLS-VERIFICATION.md).
+[`SKILLS-VERIFICATION.md`](SKILLS-VERIFICATION.md).
 
 ## Install
 
 ### Local development (web profile, isolated)
 
 ```bash
-DSH_HOME=/tmp/dsh-skills-dev dsh plugin --profile web add link:$PWD/dsh-skills-manager
+git clone https://github.com/Stijnus/dsh-skills-manager.git
+cd dsh-skills-manager
+DSH_HOME=/tmp/dsh-skills-dev dsh plugin --profile web add link:$PWD
 DSH_HOME=/tmp/dsh-skills-dev dsh --profile web --port 53999 --no-open
 ```
+
+Or install straight from this repository into an existing profile:
+
+```bash
+dsh plugin --profile <profile> add github:Stijnus/dsh-skills-manager
+```
+
+> **npm name note:** the unscoped `dsh-skills-manager` name on npm belongs to an unrelated third-party plugin. This project is therefore distributed via GitHub/link installs until a uniquely named or scoped npm release exists; do not expect a registry install to fetch this code.
 
 Overlay config for an isolated run (agents home, writable root and libraries):
 
@@ -90,7 +102,7 @@ reports `restart-required`.
 
 The current live install on this machine uses the hand-managed profile path instead: a
 `node_modules/dsh-skills-manager` symlink plus a profile-patch row (see
-[SKILLS-VERIFICATION.md](../SKILLS-VERIFICATION.md) §4). DSH's profile HMR loads both halves
+[SKILLS-VERIFICATION.md](SKILLS-VERIFICATION.md) §4). DSH's profile HMR loads both halves
 into the running app without a restart. Durability caveat: because the profile
 `package.json` does not declare the package, a later plugin-manager / pnpm operation can
 prune the symlink; re-run the desktop plugin install (or add the `link:` dependency) after
@@ -141,9 +153,9 @@ The full request/response contract, conflict rules and write format are in
 - Independent end-to-end verification: 61/61 host API assertions against a real scratch DSH
   instance, 28/28 real-browser GUI assertions (add/edit/delete/install, duplicate blocked
   before save, a11y, light+dark), desktop delivery proven live (HMR, no restart), and the
-  49-entry installed-skills invariant re-audited: [`SKILLS-VERIFICATION.md`](../SKILLS-VERIFICATION.md).
+  49-entry installed-skills invariant re-audited: [`SKILLS-VERIFICATION.md`](SKILLS-VERIFICATION.md).
 - Baseline audit of the installed skill roots and the deepseek-stack pack:
-  [`SKILLS-AUDIT.md`](../SKILLS-AUDIT.md).
+  [`SKILLS-AUDIT.md`](SKILLS-AUDIT.md).
 
 ## Known limitations
 

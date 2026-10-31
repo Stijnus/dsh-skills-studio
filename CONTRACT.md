@@ -73,9 +73,9 @@ api-dev's. The Lead owns the manifest files and integration.
 - Registry API: `ctx.skills.list({ cwd })` → summaries `{ name, description, provider, path? }`.
   Treat it as optional and defensive; never let it fail a request.
 
-Reuse the battle-tested parser at `../dsh-claude-skills/src/frontmatter.js`
-(`parseFrontmatter`, `parseYamlSubset`, `frontmatterBoolean`, `isKebabCase`): copy it into
-`src/frontmatter.js` and keep a header noting the source. Add serialization helpers there.
+`src/frontmatter.js` is a copy of the battle-tested parser from the MIT-licensed
+`dsh-claude-skills` project (`parseFrontmatter`, `parseYamlSubset`, `frontmatterBoolean`,
+`isKebabCase`), with a source header. Add serialization helpers there.
 
 ## Config (plugin row `config`, all optional)
 

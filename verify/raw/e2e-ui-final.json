@@ -95,10 +95,10 @@
     {
       "id": "screenshot-installed",
       "expected": true,
-      "observed": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-installed-light.png",
+      "observed": "verify/screenshots/ui-installed-light.png",
       "pass": true,
       "evidence": {
-        "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-installed-light.png"
+        "path": "verify/screenshots/ui-installed-light.png"
       }
     },
     {
@@ -133,10 +133,10 @@
     {
       "id": "screenshot-available",
       "expected": true,
-      "observed": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-available-light.png",
+      "observed": "verify/screenshots/ui-available-light.png",
       "pass": true,
       "evidence": {
-        "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-available-light.png"
+        "path": "verify/screenshots/ui-available-light.png"
       }
     },
     {
@@ -187,7 +187,7 @@
       "expected": {
         "focusedField": "dsm-f-name",
         "valid": true,
-        "screenshot": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-add-form-light.png"
+        "screenshot": "verify/screenshots/ui-add-form-light.png"
       },
       "observed": {
         "focused": "dsm-f-name",
@@ -195,7 +195,7 @@
       },
       "pass": true,
       "evidence": {
-        "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-add-form-light.png"
+        "path": "verify/screenshots/ui-add-form-light.png"
       }
     },
     {
@@ -241,10 +241,10 @@
     {
       "id": "screenshot-added",
       "expected": true,
-      "observed": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-added-light.png",
+      "observed": "verify/screenshots/ui-added-light.png",
       "pass": true,
       "evidence": {
-        "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-added-light.png"
+        "path": "verify/screenshots/ui-added-light.png"
       }
     },
     {
@@ -274,12 +274,12 @@
         "saveRequestsBefore": 2,
         "saveRequestsAfter": 2,
         "saveRequestsFinal": 2,
-        "screenshot": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-duplicate-blocked-light.png"
+        "screenshot": "verify/screenshots/ui-duplicate-blocked-light.png"
       },
       "pass": true,
       "evidence": {
         "blockingText": "Blocking conflicts\n\nDuplicate name: Same name in readonly-skills rank 300 and User (.agents) rank 500; rank 300 wins and shadows the other. (In readonly-skills, User (.agents))",
-        "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-duplicate-blocked-light.png"
+        "path": "verify/screenshots/ui-duplicate-blocked-light.png"
       }
     },
     {
@@ -299,7 +299,7 @@
         "httpStatus": 200,
         "rowGone": true,
         "diskGone": true,
-        "screenshot": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-delete-confirm-light.png"
+        "screenshot": "verify/screenshots/ui-delete-confirm-light.png"
       },
       "observed": {
         "confirmText": "Delete \"e2e-ui-mvwd8gt7\"? This removes the file(s).",
@@ -309,7 +309,7 @@
       },
       "pass": true,
       "evidence": {
-        "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-delete-confirm-light.png"
+        "path": "verify/screenshots/ui-delete-confirm-light.png"
       }
     },
     {
@@ -391,8 +391,8 @@
       "id": "theme-dark",
       "expected": true,
       "observed": {
-        "darkInstalled": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-installed-dark.png",
-        "darkAvailable": "/Users/stijnus/Documents/deepseek-harness/default-workspace/dsh-skills-manager/verify/screenshots/ui-available-dark.png"
+        "darkInstalled": "verify/screenshots/ui-installed-dark.png",
+        "darkAvailable": "verify/screenshots/ui-available-dark.png"
       },
       "pass": true
     },

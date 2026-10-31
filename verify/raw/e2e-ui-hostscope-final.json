@@ -69,7 +69,7 @@
       "id": "screenshot",
       "expected": true,
       "observed": {
-        "path": "dsh-skills-manager/verify/screenshots/ui-available-hostscope-light.png"
+        "path": "verify/screenshots/ui-available-hostscope-light.png"
       },
       "pass": true
     },

@@ -6,21 +6,21 @@
   "contract": "DSH 0.2.1-rc.5 @deepseek-ai/dsh-skill-filesystem + @deepseek-ai/dsh-skill + @deepseek-ai/dsh-tool-skill",
   "yamlParser": "module:/tmp/dsm-audit/yaml-pkg/dsh/node_modules/yaml/dist/index.js",
   "inputs": {
-    "agentsHome": "/Users/stijnus/.agents",
-    "dshHome": "/Users/stijnus/.dsh",
+    "agentsHome": "$HOME/.agents",
+    "dshHome": "$HOME/.dsh",
     "projects": [
-      "/Users/stijnus/Documents/deepseek-harness/default-workspace"
+      "$HOME/Documents/deepseek-harness/default-workspace"
     ],
-    "manifest": "/Users/stijnus/.agents/.ds-stack-manifest.json",
-    "lock": "/Users/stijnus/.agents/.skill-lock.json",
+    "manifest": "$HOME/.agents/.ds-stack-manifest.json",
+    "lock": "$HOME/.agents/.skill-lock.json",
     "catalogMax": 500
   },
   "roots": [
     {
-      "id": "project-dsh:/Users/stijnus/Documents/deepseek-harness/default-workspace",
+      "id": "project-dsh:$HOME/Documents/deepseek-harness/default-workspace",
       "source": "project-dsh",
       "rank": 100,
-      "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/.dsh/skills",
+      "path": "$HOME/Documents/deepseek-harness/default-workspace/.dsh/skills",
       "exists": false,
       "skipSystem": false,
       "entries": [],
@@ -36,10 +36,10 @@
       }
     },
     {
-      "id": "project-agents:/Users/stijnus/Documents/deepseek-harness/default-workspace",
+      "id": "project-agents:$HOME/Documents/deepseek-harness/default-workspace",
       "source": "project-agents",
       "rank": 200,
-      "path": "/Users/stijnus/Documents/deepseek-harness/default-workspace/.agents/skills",
+      "path": "$HOME/Documents/deepseek-harness/default-workspace/.agents/skills",
       "exists": false,
       "skipSystem": false,
       "entries": [],
@@ -58,7 +58,7 @@
       "id": "user-dsh",
       "source": "user-dsh",
       "rank": 400,
-      "path": "/Users/stijnus/.dsh/skills",
+      "path": "$HOME/.dsh/skills",
       "exists": true,
       "skipSystem": true,
       "entries": [],
@@ -77,14 +77,14 @@
       "id": "user-agents",
       "source": "user-agents",
       "rank": 500,
-      "path": "/Users/stijnus/.agents/skills",
+      "path": "$HOME/.agents/skills",
       "exists": true,
       "skipSystem": false,
       "entries": [
         {
           "entry": "accessibility",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/accessibility/SKILL.md",
+          "path": "$HOME/.agents/skills/accessibility/SKILL.md",
           "name": "accessibility",
           "nameMatchesEntry": true,
           "descriptionChars": 212,
@@ -121,7 +121,7 @@
         {
           "entry": "code-review",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/code-review/SKILL.md",
+          "path": "$HOME/.agents/skills/code-review/SKILL.md",
           "name": "code-review",
           "nameMatchesEntry": true,
           "descriptionChars": 417,
@@ -154,7 +154,7 @@
         {
           "entry": "computer-use",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/computer-use/SKILL.md",
+          "path": "$HOME/.agents/skills/computer-use/SKILL.md",
           "name": "computer-use",
           "nameMatchesEntry": true,
           "descriptionChars": 548,
@@ -185,7 +185,7 @@
         {
           "entry": "ds-adopt",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-adopt/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-adopt/SKILL.md",
           "name": "ds-adopt",
           "nameMatchesEntry": true,
           "descriptionChars": 150,
@@ -216,7 +216,7 @@
         {
           "entry": "ds-audit.md",
           "kind": "flat",
-          "path": "/Users/stijnus/.agents/skills/ds-audit.md",
+          "path": "$HOME/.agents/skills/ds-audit.md",
           "name": "ds-audit",
           "nameMatchesEntry": true,
           "descriptionChars": 111,
@@ -248,7 +248,7 @@
         {
           "entry": "ds-best-of-n",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-best-of-n/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-best-of-n/SKILL.md",
           "name": "ds-best-of-n",
           "nameMatchesEntry": true,
           "descriptionChars": 193,
@@ -279,7 +279,7 @@
         {
           "entry": "ds-best.md",
           "kind": "flat",
-          "path": "/Users/stijnus/.agents/skills/ds-best.md",
+          "path": "$HOME/.agents/skills/ds-best.md",
           "name": "ds-best",
           "nameMatchesEntry": true,
           "descriptionChars": 85,
@@ -311,7 +311,7 @@
         {
           "entry": "ds-blast-radius",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-blast-radius/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-blast-radius/SKILL.md",
           "name": "ds-blast-radius",
           "nameMatchesEntry": true,
           "descriptionChars": 173,
@@ -342,7 +342,7 @@
         {
           "entry": "ds-blueprint",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-blueprint/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-blueprint/SKILL.md",
           "name": "ds-blueprint",
           "nameMatchesEntry": true,
           "descriptionChars": 192,
@@ -373,7 +373,7 @@
         {
           "entry": "ds-catchup",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-catchup/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-catchup/SKILL.md",
           "name": "ds-catchup",
           "nameMatchesEntry": true,
           "descriptionChars": 166,
@@ -404,7 +404,7 @@
         {
           "entry": "ds-context-reset",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-context-reset/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-context-reset/SKILL.md",
           "name": "ds-context-reset",
           "nameMatchesEntry": true,
           "descriptionChars": 188,
@@ -435,7 +435,7 @@
         {
           "entry": "ds-context.md",
           "kind": "flat",
-          "path": "/Users/stijnus/.agents/skills/ds-context.md",
+          "path": "$HOME/.agents/skills/ds-context.md",
           "name": "ds-context",
           "nameMatchesEntry": true,
           "descriptionChars": 85,
@@ -467,7 +467,7 @@
         {
           "entry": "ds-design",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-design/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-design/SKILL.md",
           "name": "ds-design",
           "nameMatchesEntry": true,
           "descriptionChars": 192,
@@ -498,7 +498,7 @@
         {
           "entry": "ds-design-audit",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-design-audit/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-design-audit/SKILL.md",
           "name": "ds-design-audit",
           "nameMatchesEntry": true,
           "descriptionChars": 195,
@@ -529,7 +529,7 @@
         {
           "entry": "ds-explain",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-explain/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-explain/SKILL.md",
           "name": "ds-explain",
           "nameMatchesEntry": true,
           "descriptionChars": 166,
@@ -560,7 +560,7 @@
         {
           "entry": "ds-help",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-help/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-help/SKILL.md",
           "name": "ds-help",
           "nameMatchesEntry": true,
           "descriptionChars": 173,
@@ -591,7 +591,7 @@
         {
           "entry": "ds-jury",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-jury/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-jury/SKILL.md",
           "name": "ds-jury",
           "nameMatchesEntry": true,
           "descriptionChars": 183,
@@ -622,7 +622,7 @@
         {
           "entry": "ds-ledger",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-ledger/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-ledger/SKILL.md",
           "name": "ds-ledger",
           "nameMatchesEntry": true,
           "descriptionChars": 183,
@@ -653,7 +653,7 @@
         {
           "entry": "ds-lessons",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-lessons/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-lessons/SKILL.md",
           "name": "ds-lessons",
           "nameMatchesEntry": true,
           "descriptionChars": 176,
@@ -684,7 +684,7 @@
         {
           "entry": "ds-mode",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-mode/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-mode/SKILL.md",
           "name": "ds-mode",
           "nameMatchesEntry": true,
           "descriptionChars": 162,
@@ -715,7 +715,7 @@
         {
           "entry": "ds-plan-loop",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-plan-loop/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-plan-loop/SKILL.md",
           "name": "ds-plan-loop",
           "nameMatchesEntry": true,
           "descriptionChars": 182,
@@ -746,7 +746,7 @@
         {
           "entry": "ds-plan.md",
           "kind": "flat",
-          "path": "/Users/stijnus/.agents/skills/ds-plan.md",
+          "path": "$HOME/.agents/skills/ds-plan.md",
           "name": "ds-plan",
           "nameMatchesEntry": true,
           "descriptionChars": 96,
@@ -778,7 +778,7 @@
         {
           "entry": "ds-pr",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-pr/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-pr/SKILL.md",
           "name": "ds-pr",
           "nameMatchesEntry": true,
           "descriptionChars": 153,
@@ -809,7 +809,7 @@
         {
           "entry": "ds-pr-comments",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-pr-comments/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-pr-comments/SKILL.md",
           "name": "ds-pr-comments",
           "nameMatchesEntry": true,
           "descriptionChars": 168,
@@ -840,7 +840,7 @@
         {
           "entry": "ds-principles",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-principles/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-principles/SKILL.md",
           "name": "ds-principles",
           "nameMatchesEntry": true,
           "descriptionChars": 184,
@@ -871,7 +871,7 @@
         {
           "entry": "ds-ready",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-ready/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-ready/SKILL.md",
           "name": "ds-ready",
           "nameMatchesEntry": true,
           "descriptionChars": 146,
@@ -902,7 +902,7 @@
         {
           "entry": "ds-review-loop",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-review-loop/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-review-loop/SKILL.md",
           "name": "ds-review-loop",
           "nameMatchesEntry": true,
           "descriptionChars": 187,
@@ -933,7 +933,7 @@
         {
           "entry": "ds-review.md",
           "kind": "flat",
-          "path": "/Users/stijnus/.agents/skills/ds-review.md",
+          "path": "$HOME/.agents/skills/ds-review.md",
           "name": "ds-review",
           "nameMatchesEntry": true,
           "descriptionChars": 114,
@@ -965,7 +965,7 @@
         {
           "entry": "ds-revive",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-revive/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-revive/SKILL.md",
           "name": "ds-revive",
           "nameMatchesEntry": true,
           "descriptionChars": 156,
@@ -996,7 +996,7 @@
         {
           "entry": "ds-sharpen",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-sharpen/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-sharpen/SKILL.md",
           "name": "ds-sharpen",
           "nameMatchesEntry": true,
           "descriptionChars": 192,
@@ -1027,7 +1027,7 @@
         {
           "entry": "ds-ship",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-ship/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-ship/SKILL.md",
           "name": "ds-ship",
           "nameMatchesEntry": true,
           "descriptionChars": 156,
@@ -1058,7 +1058,7 @@
         {
           "entry": "ds-swarm",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-swarm/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-swarm/SKILL.md",
           "name": "ds-swarm",
           "nameMatchesEntry": true,
           "descriptionChars": 183,
@@ -1089,7 +1089,7 @@
         {
           "entry": "ds-tdd",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-tdd/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-tdd/SKILL.md",
           "name": "ds-tdd",
           "nameMatchesEntry": true,
           "descriptionChars": 174,
@@ -1120,7 +1120,7 @@
         {
           "entry": "ds-unslop",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-unslop/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-unslop/SKILL.md",
           "name": "ds-unslop",
           "nameMatchesEntry": true,
           "descriptionChars": 167,
@@ -1151,7 +1151,7 @@
         {
           "entry": "ds-unstick",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-unstick/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-unstick/SKILL.md",
           "name": "ds-unstick",
           "nameMatchesEntry": true,
           "descriptionChars": 187,
@@ -1182,7 +1182,7 @@
         {
           "entry": "ds-verify-loop",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-verify-loop/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-verify-loop/SKILL.md",
           "name": "ds-verify-loop",
           "nameMatchesEntry": true,
           "descriptionChars": 196,
@@ -1213,7 +1213,7 @@
         {
           "entry": "ds-verify.md",
           "kind": "flat",
-          "path": "/Users/stijnus/.agents/skills/ds-verify.md",
+          "path": "$HOME/.agents/skills/ds-verify.md",
           "name": "ds-verify",
           "nameMatchesEntry": true,
           "descriptionChars": 94,
@@ -1245,7 +1245,7 @@
         {
           "entry": "ds-watch-pr",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/ds-watch-pr/SKILL.md",
+          "path": "$HOME/.agents/skills/ds-watch-pr/SKILL.md",
           "name": "ds-watch-pr",
           "nameMatchesEntry": true,
           "descriptionChars": 165,
@@ -1276,7 +1276,7 @@
         {
           "entry": "find-skills",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/find-skills/SKILL.md",
+          "path": "$HOME/.agents/skills/find-skills/SKILL.md",
           "name": "find-skills",
           "nameMatchesEntry": true,
           "descriptionChars": 303,
@@ -1307,7 +1307,7 @@
         {
           "entry": "orca-cli",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/orca-cli/SKILL.md",
+          "path": "$HOME/.agents/skills/orca-cli/SKILL.md",
           "name": "orca-cli",
           "nameMatchesEntry": true,
           "descriptionChars": 782,
@@ -1338,7 +1338,7 @@
         {
           "entry": "orchestration",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/orchestration/SKILL.md",
+          "path": "$HOME/.agents/skills/orchestration/SKILL.md",
           "name": "orchestration",
           "nameMatchesEntry": true,
           "descriptionChars": 813,
@@ -1369,7 +1369,7 @@
         {
           "entry": "playwright-best-practices",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/playwright-best-practices/SKILL.md",
+          "path": "$HOME/.agents/skills/playwright-best-practices/SKILL.md",
           "name": "playwright-best-practices",
           "nameMatchesEntry": true,
           "descriptionChars": 984,
@@ -1406,7 +1406,7 @@
         {
           "entry": "playwright-cli",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/playwright-cli/SKILL.md",
+          "path": "$HOME/.agents/skills/playwright-cli/SKILL.md",
           "name": "playwright-cli",
           "nameMatchesEntry": true,
           "descriptionChars": 77,
@@ -1442,7 +1442,7 @@
         {
           "entry": "reverse-engineer-anything",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/reverse-engineer-anything/SKILL.md",
+          "path": "$HOME/.agents/skills/reverse-engineer-anything/SKILL.md",
           "name": "reverse-engineer-anything",
           "nameMatchesEntry": true,
           "descriptionChars": 403,
@@ -1474,7 +1474,7 @@
         {
           "entry": "supabase",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/supabase/SKILL.md",
+          "path": "$HOME/.agents/skills/supabase/SKILL.md",
           "name": "supabase",
           "nameMatchesEntry": true,
           "descriptionChars": 788,
@@ -1506,7 +1506,7 @@
         {
           "entry": "supabase-postgres-best-practices",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/supabase-postgres-best-practices/SKILL.md",
+          "path": "$HOME/.agents/skills/supabase-postgres-best-practices/SKILL.md",
           "name": "supabase-postgres-best-practices",
           "nameMatchesEntry": true,
           "descriptionChars": 834,
@@ -1543,7 +1543,7 @@
         {
           "entry": "vercel-react-best-practices",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/vercel-react-best-practices/SKILL.md",
+          "path": "$HOME/.agents/skills/vercel-react-best-practices/SKILL.md",
           "name": "vercel-react-best-practices",
           "nameMatchesEntry": true,
           "descriptionChars": 329,
@@ -1580,7 +1580,7 @@
         {
           "entry": "vibe-to-ui",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/vibe-to-ui/SKILL.md",
+          "path": "$HOME/.agents/skills/vibe-to-ui/SKILL.md",
           "name": "vibe-to-ui",
           "nameMatchesEntry": true,
           "descriptionChars": 611,
@@ -1612,7 +1612,7 @@
         {
           "entry": "web-design-guidelines",
           "kind": "bundle",
-          "path": "/Users/stijnus/.agents/skills/web-design-guidelines/SKILL.md",
+          "path": "$HOME/.agents/skills/web-design-guidelines/SKILL.md",
           "name": "web-design-guidelines",
           "nameMatchesEntry": true,
           "descriptionChars": 184,
@@ -1798,12 +1798,12 @@
     }
   },
   "manifest": {
-    "path": "/Users/stijnus/.agents/.ds-stack-manifest.json",
+    "path": "$HOME/.agents/.ds-stack-manifest.json",
     "exists": true,
     "version": 2,
     "source": "aicodeking/deepseek-stack",
     "upstreamCommit": "d4f1ebe72e8314c3a0c6135bb82f623c650f7218",
-    "target": "/Users/stijnus/.agents/skills",
+    "target": "$HOME/.agents/skills",
     "sections": {
       "skills": 29,
       "aliases": 6
@@ -1829,7 +1829,7 @@
     "descriptionCharsMismatch": []
   },
   "lock": {
-    "path": "/Users/stijnus/.agents/.skill-lock.json",
+    "path": "$HOME/.agents/.skill-lock.json",
     "exists": true,
     "version": 3,
     "entries": 12,
@@ -1844,7 +1844,7 @@
   "sourceDrift": [
     {
       "label": "bundle-sources",
-      "sourceDir": "/Users/stijnus/Documents/deepseek-harness/default-workspace/ds-stack/skills",
+      "sourceDir": "$HOME/Documents/deepseek-harness/default-workspace/ds-stack/skills",
       "exists": true,
       "checked": 29,
       "match": 29,
@@ -1854,7 +1854,7 @@
     },
     {
       "label": "alias-sources",
-      "sourceDir": "/Users/stijnus/Documents/deepseek-harness/default-workspace/ds-stack/aliases",
+      "sourceDir": "$HOME/Documents/deepseek-harness/default-workspace/ds-stack/aliases",
       "exists": true,
       "checked": 6,
       "match": 6,
@@ -1952,23 +1952,23 @@
       "severity": "medium",
       "code": "lock-drift",
       "message": "installed non-pack skills with no lock entry (untracked by the skills CLI): reverse-engineer-anything, vibe-to-ui",
-      "evidence": "/Users/stijnus/.agents/.skill-lock.json"
+      "evidence": "$HOME/.agents/.skill-lock.json"
     },
     {
       "severity": "low",
       "code": "unmanaged-skills",
       "message": "installed entries not in the deepseek-stack manifest (expected only for community skills): 14",
-      "evidence": "/Users/stijnus/.agents/.ds-stack-manifest.json"
+      "evidence": "$HOME/.agents/.ds-stack-manifest.json"
     },
     {
       "severity": "info",
       "code": "root-absent",
-      "message": "root project-dsh:/Users/stijnus/Documents/deepseek-harness/default-workspace does not exist (/Users/stijnus/Documents/deepseek-harness/default-workspace/.dsh/skills)"
+      "message": "root project-dsh:$HOME/Documents/deepseek-harness/default-workspace does not exist ($HOME/Documents/deepseek-harness/default-workspace/.dsh/skills)"
     },
     {
       "severity": "info",
       "code": "root-absent",
-      "message": "root project-agents:/Users/stijnus/Documents/deepseek-harness/default-workspace does not exist (/Users/stijnus/Documents/deepseek-harness/default-workspace/.agents/skills)"
+      "message": "root project-agents:$HOME/Documents/deepseek-harness/default-workspace does not exist ($HOME/Documents/deepseek-harness/default-workspace/.agents/skills)"
     }
   ]
 }

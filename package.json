@@ -14,6 +14,7 @@
     "./icon": "./icon.svg"
   },
   "files": [
+    "LICENSE",
     "index.js",
     "client.js",
     "src/**/*.js",
@@ -48,5 +49,18 @@
   "engines": {
     "dsh": "^0.2.1-rc.5"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "author": "Stijnus",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stijnus/dsh-skills-manager.git"
+  },
+  "homepage": "https://github.com/Stijnus/dsh-skills-manager#readme",
+  "bugs": {
+    "url": "https://github.com/Stijnus/dsh-skills-manager/issues"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check index.js && node --check client.js && for f in src/*.js; do node --check \"$f\"; done"
+  }
 }
